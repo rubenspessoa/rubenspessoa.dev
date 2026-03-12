@@ -21,7 +21,6 @@
   --radius-md: 18px;
   --radius-sm: 999px;
   --max-width: 1200px;
-  --header-offset: 7rem;
 }
 
 *,
@@ -37,6 +36,7 @@ html {
 body {
   margin: 0;
   min-width: 320px;
+  --header-offset: 7rem;
   font-family: "Manrope", "Segoe UI", sans-serif;
   color: var(--ink);
   background:
@@ -944,7 +944,7 @@ input {
 }
 
 @media (max-width: 860px) {
-  :root {
+  body {
     --header-offset: 9rem;
   }
 
@@ -980,7 +980,7 @@ input {
 }
 
 @media (max-width: 640px) {
-  :root {
+  body {
     --header-offset: 10rem;
   }
 
