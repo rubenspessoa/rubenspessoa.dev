@@ -1,237 +1,563 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1, shrink-to-fit=no"
-  >
-  <meta
-    name="Description"
-    content="This is Rubens Pessoa's personal website. It highlights his experiences as well as what he is looking to achieve professionally. Reach out!"
-  >
-  <link
-    rel="canonical"
-    href="https://rubenspessoa.dev/"
-  >
-  <title>rubenspessoa | ios software engineer</title>
-  <link
-    rel="stylesheet"
-    type="text/css"
-    href="styles/styles.min.css"
-  >
-  <link
-    rel="stylesheet"
-    type="text/css"
-    href="styles/normalize.css"
-  >
-  <link
-    rel="stylesheet"
-    type="text/css"
-    href="node_modules/@fortawesome/fontawesome-free/css/brands.min.css"
-  >
-  <link
-    rel="stylesheet"
-    type="text/css"
-    href="node_modules/@fortawesome/fontawesome-free/css/regular.min.css"
-  >
-</head>
-
-<body>
-  <main>
-    <!-- INTRO SECTION -->
-    <div class="intro-wrapper stars">
-      <div class="intro-wrapper twinkling">
-        <div class="container">
-          <div class="intro-heading">
-            <div class="row no-gutters">
-              <div class="col">
-                <h5>Hello, world.</h5>
-              </div>
-            </div>
-            <div class="row no-gutters">
-              <div class="col">
-                <h1>I'm Rubens Pessoa.</h1>
-              </div>
-            </div>
-            <div class="row no-gutters">
-              <div class="col">
-                <h6>Senior iOS Software Engineer</h6>
-              </div>
-            </div>
-            <div class="buttons-container">
-              <div class="button btn-black">
-                <a
-                  href="#about"
-                  aria-label="About me"
-                >More about me</a>
-              </div>
-            </div>
-          </div>
-          <div class="intro-social">
-            <div class="row no-gutters">
-              <div class="col-6 intro-social-item">
-                <a
-                  href="https://github.com/rubenspessoa"
-                  target="_blank"
-                  aria-label="Github button"
-                ><i class="fab fa-github"></i></a>
-              </div>
-              <div class="col-6 intro-social-item">
-                <a
-                  href="https://www.linkedin.com/in/rubenspbf/"
-                  target="_blank"
-                  aria-label="Linkedin button"
-                ><i class="fab fa-linkedin-in"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- ABOUT SECTION -->
-    <div
-      id="about"
-      class="about"
+  <head>
+    <meta charset="UTF-8">
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
     >
-      <div class="container">
-        <div class="row no-gutters section-intro">
-          <div class="col-12">
-            <h5>About</h5>
-            <h1>Let me introduce myself.</h1>
-            <div class="image-cropper">
-              <img
-                src="images/first_original.webp"
-                alt="Profile Picture"
-                class="profile-pic"
+    <meta
+      name="description"
+      content="Rubens Pessoa is a senior iOS and Apple platform engineer building AI-powered mobile apps, SwiftUI products, and developer tools."
+    >
+    <meta
+      name="theme-color"
+      content="#f4f1ea"
+    >
+    <meta
+      property="og:title"
+      content="Rubens Pessoa | AI-Powered Mobile Apps & SwiftUI Engineering"
+    >
+    <meta
+      property="og:description"
+      content="Senior iOS engineer and indie builder focused on AI-powered apps, SwiftUI, and thoughtful product work across Apple platforms."
+    >
+    <meta
+      property="og:type"
+      content="website"
+    >
+    <meta
+      property="og:url"
+      content="https://rubenspessoa.dev/"
+    >
+    <meta
+      property="og:image"
+      content="https://rubenspessoa.dev/images/first_w_661.webp"
+    >
+    <meta
+      name="twitter:card"
+      content="summary_large_image"
+    >
+    <meta
+      name="twitter:title"
+      content="Rubens Pessoa | AI-Powered Mobile Apps & SwiftUI Engineering"
+    >
+    <meta
+      name="twitter:description"
+      content="Senior iOS engineer and indie builder focused on AI-powered apps, SwiftUI, and thoughtful product work across Apple platforms."
+    >
+    <link
+      rel="canonical"
+      href="https://rubenspessoa.dev/"
+    >
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon-32x32.png"
+    >
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/favicon-16x16.png"
+    >
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/apple-touch-icon.png"
+    >
+    <link
+      rel="manifest"
+      href="site.webmanifest"
+    >
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    >
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    >
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600;6..72,700&display=swap"
+    >
+    <link
+      rel="stylesheet"
+      href="styles/site.css"
+    >
+    <title>Rubens Pessoa | AI-Powered Mobile Apps & SwiftUI Engineering</title>
+    <script
+      type="application/ld+json"
+    >
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Rubens Pessoa",
+        "url": "https://rubenspessoa.dev/",
+        "image": "https://rubenspessoa.dev/images/first_w_661.webp",
+        "jobTitle": "Senior iOS / Apple platform engineer",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Graz",
+          "addressCountry": "AT"
+        },
+        "sameAs": [
+          "https://github.com/rubenspessoa",
+          "https://www.linkedin.com/in/rubenspbf/"
+        ],
+        "knowsAbout": [
+          "AI-powered mobile apps",
+          "SwiftUI",
+          "iOS development",
+          "Apple platform engineering",
+          "Developer tools",
+          "Product-minded engineering"
+        ]
+      }
+    </script>
+    <script
+      defer
+      src="scripts/site.js"
+    ></script>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="site-header__inner glass-panel">
+          <a
+            class="brand"
+            href="#top"
+            aria-label="Rubens Pessoa home"
+          >
+            <span class="brand__mark">RP</span>
+            <span class="brand__text">
+              <strong>Rubens Pessoa</strong>
+              <span>AI-powered apps for Apple platforms</span>
+            </span>
+          </a>
+          <nav
+            class="site-nav"
+            aria-label="Primary"
+          >
+            <a href="#projects">Apps</a>
+            <a href="#notes">Writing</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+          </nav>
+          <a
+            class="button button--ghost button--small"
+            href="mailto:contact@rubenspessoa.dev?subject=Hello%20Rubens"
+          >Say hello</a>
+        </div>
+      </header>
+
+      <main id="top">
+        <section class="hero section">
+          <div class="hero__copy" data-reveal>
+            <p class="eyebrow">Rubens Pessoa / Senior iOS / Apple platform engineer / Based in Graz, Austria</p>
+            <h1>I build AI-powered mobile apps and developer tools for Apple platforms.</h1>
+            <p class="hero__lede">
+              I'm a senior iOS engineer and indie builder focused on SwiftUI, thoughtful UX, and shipping real products.
+              Over the last 7+ years, I've helped build 15+ apps with 10M+ downloads across client work and products.
+            </p>
+            <p class="hero__subcopy">
+              This site is a small workshop on the internet for the apps, tools, and notes that come out of that work.
+            </p>
+            <div class="hero__actions">
+              <a
+                class="button button--primary"
+                href="#projects"
+              >View selected work</a>
+              <a
+                class="button button--ghost"
+                href="#notes"
+              >Read the notes</a>
+            </div>
+            <ul class="hero__proof">
+              <li>
+                <strong>7+ years</strong>
+                <span>building native products</span>
+              </li>
+              <li>
+                <strong>15+ apps</strong>
+                <span>shipped across products and client work</span>
+              </li>
+              <li>
+                <strong>10M+ downloads</strong>
+                <span>across the apps I've worked on</span>
+              </li>
+              <li>
+                <strong>Apple-first</strong>
+                <span>iOS, iPadOS, macOS, watchOS</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="hero__panel" data-reveal>
+            <div class="glass-panel atelier-card">
+              <div class="atelier-card__chrome">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <p class="eyebrow eyebrow--muted">Current focus</p>
+              <h2>A calmer way to build software that still ships.</h2>
+              <ul class="atelier-list">
+                <li>
+                  <span>Building</span>
+                  <strong>AI-powered apps, SwiftUI systems, and developer tools</strong>
+                </li>
+                <li>
+                  <span>Best fit</span>
+                  <strong>Founders and product teams who care about taste, clarity, and execution</strong>
+                </li>
+                <li>
+                  <span>Working style</span>
+                  <strong>Product-minded engineering, thoughtful UX, and selective collaboration</strong>
+                </li>
+              </ul>
+              <div class="atelier-tags" aria-label="Areas of focus">
+                <span>AI apps</span>
+                <span>SwiftUI</span>
+                <span>Apple platforms</span>
+                <span>Developer tools</span>
+                <span>Product thinking</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section
+          id="projects"
+          class="section"
+        >
+          <div class="section-heading" data-reveal>
+            <div>
+              <p class="eyebrow">Selected work</p>
+              <h2>Apps, tools, and experiments with real shipping energy.</h2>
+            </div>
+            <p>
+              I want this part of the site to feel like a workbench, not a trophy cabinet. Some projects are public,
+              some are still evolving, and some exist because better tools make better products possible.
+            </p>
+          </div>
+
+          <div class="project-group" data-reveal>
+            <div class="project-group__header">
+              <h3>Built</h3>
+              <p>Products and tools that already have weight in the real world.</p>
+            </div>
+            <div class="project-grid project-grid--featured">
+              <article class="project-card glass-panel project-card--featured project-card--hustlrr">
+                <div class="project-card__body">
+                  <div class="project-card__meta">
+                    <span class="tag">AI product</span>
+                    <span class="tag tag--muted">Mobile app</span>
+                  </div>
+                  <h4>Hustlrr</h4>
+                  <p>
+                    An AI-powered product exploring how mobile software can feel more focused, useful, and human when
+                    intelligence is built into the flow instead of bolted on top.
+                  </p>
+                  <div class="project-callout">
+                    <span>What makes it interesting</span>
+                    <p>It treats AI as part of the product experience, not the headline.</p>
+                  </div>
+                  <a
+                    class="project-link"
+                    href="https://www.hustlrr.ai/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >Visit product</a>
+                </div>
+                <div class="project-visual">
+                  <div class="device device--phone">
+                    <span class="device__badge">AI routines</span>
+                    <strong>Hustlrr</strong>
+                    <small>Clearer structure. Better momentum.</small>
+                  </div>
+                  <div class="device device--floating">
+                    <span>Native iPhone flows</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="project-card glass-panel project-card--featured project-card--nitpickr">
+                <div class="project-card__body">
+                  <div class="project-card__meta">
+                    <span class="tag">Developer tool</span>
+                    <span class="tag tag--muted">AI review assistant</span>
+                  </div>
+                  <h4>Nitpickr</h4>
+                  <p>
+                    An AI PR review tool built to sharpen feedback loops without stripping away context, trust, or the
+                    human side of engineering judgment.
+                  </p>
+                  <div class="project-callout">
+                    <span>What makes it interesting</span>
+                    <p>It sits right at the edge between code quality, internal tooling, and team dynamics.</p>
+                  </div>
+                  <a
+                    class="project-link"
+                    href="https://github.com/rubenspessoa/nitpickr"
+                    target="_blank"
+                    rel="noreferrer"
+                  >View project</a>
+                </div>
+                <div class="project-visual">
+                  <div class="device device--wide">
+                    <span class="device__badge">PR review</span>
+                    <strong>Nitpickr</strong>
+                    <small>Faster signals. Better conversations.</small>
+                  </div>
+                  <div class="device device--floating device--compact">
+                    <span>Review notes</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <div class="project-group project-group--building" data-reveal>
+            <div class="project-group__header">
+              <h3>Building</h3>
+              <p>New work in progress, shaped through prototypes, shipping pressure, and iteration.</p>
+            </div>
+            <div class="project-grid project-grid--compact">
+              <article class="project-card glass-panel">
+                <div class="project-card__meta">
+                  <span class="tag">Apple platform products</span>
+                  <span class="tag tag--muted">Client and company work</span>
+                </div>
+                <h4>Selected product work</h4>
+                <p>
+                  Native apps across communications, banking, healthcare, hospitality, and transportation, with
+                  product work that has reached 10M+ downloads over time.
+                </p>
+                <div class="project-callout">
+                  <span>What makes it interesting</span>
+                  <p>Shipping at scale teaches a different kind of discipline than building in a vacuum.</p>
+                </div>
+              </article>
+
+              <article class="project-card glass-panel">
+                <div class="project-card__meta">
+                  <span class="tag">R&amp;D</span>
+                  <span class="tag tag--muted">SwiftUI prototypes</span>
+                </div>
+                <h4>SwiftUI experiments</h4>
+                <p>
+                  A running set of prototypes across iPhone, iPad, Mac, and Watch to test interaction ideas, product
+                  direction, and interface details before they harden into roadmap decisions.
+                </p>
+                <div class="project-callout">
+                  <span>What makes it interesting</span>
+                  <p>The right prototype can save weeks of overbuilding.</p>
+                </div>
+              </article>
+
+              <article class="project-card glass-panel">
+                <div class="project-card__meta">
+                  <span class="tag">Studio tools</span>
+                  <span class="tag tag--muted">Internal systems</span>
+                </div>
+                <h4>Small tools that keep shipping smooth</h4>
+                <p>
+                  Utilities for release prep, review flow, and product operations that quietly improve speed, clarity,
+                  and decision-making around the work.
+                </p>
+                <div class="project-callout">
+                  <span>What makes it interesting</span>
+                  <p>Good internal tools rarely look glamorous, but they compound fast.</p>
+                </div>
+              </article>
+
+              <article class="project-card glass-panel">
+                <div class="project-card__meta">
+                  <span class="tag">In progress</span>
+                  <span class="tag tag--muted">Next release</span>
+                </div>
+                <h4>The next AI app</h4>
+                <p>
+                  A new native Apple-platform product currently being shaped through smaller experiments, careful UX,
+                  and real usage rather than premature polish.
+                </p>
+                <div class="project-callout">
+                  <span>What makes it interesting</span>
+                  <p>I'm treating it like a workshop piece: tight scope, strong taste, room to evolve.</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section
+          id="notes"
+          class="section"
+        >
+          <div class="section-heading" data-reveal>
+            <div>
+              <p class="eyebrow">Writing</p>
+              <h2>Notes from a builder, not a content machine.</h2>
+            </div>
+            <p>
+              I'm interested in the space between idea and shipping: the experiments, tradeoffs, dead ends, interface
+              details, and lessons worth keeping. Warm notes, not SEO debris.
+            </p>
+          </div>
+          <div class="notes-grid" data-reveal>
+            <article class="note-card glass-panel">
+              <span class="note-card__status">First notes soon</span>
+              <h3>AI in a mobile app should earn its place</h3>
+              <p>What changes when intelligence becomes part of the flow instead of the main spectacle.</p>
+            </article>
+            <article class="note-card glass-panel">
+              <span class="note-card__status">First notes soon</span>
+              <h3>SwiftUI patterns that survive real product change</h3>
+              <p>A note on building interfaces that stay calm even when the requirements do not.</p>
+            </article>
+            <article class="note-card glass-panel">
+              <span class="note-card__status">First notes soon</span>
+              <h3>Shipping experiments without turning them into noise</h3>
+              <p>How I think about scope, signal, and deciding which bets deserve another week.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section section--newsletter">
+          <div class="newsletter glass-panel" data-reveal>
+            <div class="newsletter__copy">
+              <p class="eyebrow eyebrow--muted">Newsletter</p>
+              <h2>Notes from a Builder</h2>
+              <p>
+                Occasional emails about what I'm building, testing, and learning across AI products, Apple platforms,
+                and the messy middle of shipping. Low-volume, no funnel energy, only the useful bits.
+              </p>
+              <p class="newsletter__note">
+                The full signup integration can come later. For now, this opens a simple email so I can add people
+                manually and keep it personal.
+              </p>
+            </div>
+            <form
+              class="newsletter-form"
+              data-newsletter-form
+            >
+              <label
+                class="sr-only"
+                for="newsletter-email"
+              >Email address</label>
+              <input
+                id="newsletter-email"
+                name="email"
+                type="email"
+                placeholder="Your email"
+                autocomplete="email"
               >
-            </div>
-            <p>"Greetings! I am Rubens Pessoa, a 28-year-old software engineer specialized in iOS development. With over six years of experience in the field, I have contributed to numerous exciting and challenging projects and I am always eager to hear about great projects and discuss collaborations. Please feel free to reach out to me at any time! I'm always open to communication and would be delighted to discuss any opportunities or ideas you may have."</p>
+              <button
+                class="button button--primary"
+                type="submit"
+              >Join quietly</button>
+              <p
+                class="newsletter-form__feedback"
+                data-newsletter-feedback
+                aria-live="polite"
+              ></p>
+            </form>
           </div>
-        </div>
-        <div class="row">
-          <div class="col-12 col-md-12">
-            <div class="about-content">
-              <h3>Summary</h3>
-              <p>An accomplished Senior iOS Software Engineer with experience in developing, launching, and maintaining mobile applications across a range of industries, including communications, banking, healthcare, hospitality, and transportation. Currently enrolled in the Master's program in Software Engineering and Management at Technische Universität Graz, is dedicated to enhancing his skills and knowledge to deliver world-class products. With a proven track record in problem-solving, teamwork, and attention to detail, is committed to creating exceptional mobile applications that meet the needs of businesses and users alike.</p>
-            </div>
-            <div class="about-content-profile">
-              <h4>FULLNAME:</h4>
-              <p>Rubens Pessoa de Barros Filho</p>
-              <h4>BIRTH DATE:</h4>
-              <p>January 31, 1995</p>
-              <h4>WEBSITE:</h4>
-              <p>rubenspessoa.dev</p>
-              <h4>E-MAIL:</h4>
-              <p>contact@rubenspessoa.dev</p>
-            </div>
-          </div>
-        </div>
-        <div class="row buttons-container">
-          <a
-            href="#contact"
-            title="Contact Me"
-            class="col-12 col-md-6 button btn-transparent"
-            aria-label="Contact Me"
-          >Contact Me</a>
-          <a
-            href="curriculum/curriculum_vitae_rubensp.pdf"
-            title="Download CV"
-            class="col-12 col-md-6 button btn-black"
-            aria-label="Curriculum Button"
-          >Download CV</a>
-        </div>
-      </div>
-    </div>
-    <!-- CONTACT SECTION -->
-    <div
-      id="contact"
-      class="contact stars"
-    >
-      <div class="contact twinkling">
-        <div class="container">
-          <div class="row no-gutters">
-            <div class="col-12">
-              <h5>Contact</h5>
-              <h1>I'd love to hear from you</h1>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-12 col-md-6">
-              <div class="icon-container">
-                <i class="far fa-map"></i>
-              </div>
-              <h6>Where to find me</h6>
-              <p>Graz, Austria</p>
-            </div>
-            <div class="col-12 col-md-6">
-              <div class="icon-container">
-                <i class="far fa-envelope"></i>
-              </div>
-              <h6>Contact me at</h6>
-              <p>contact@rubenspessoa.dev</p>
-            </div>
-            <!-- <div class="col-12 col-md-4">
-              <div class="icon-container">
-                <i class="far fa-handshake"></i>
-              </div>
-              <h6>Call me at</h6>
-              <p>+43 677 6304 1761</p>
-            </div> -->
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- FOOTER SECTION -->
-    <footer class="stars">
-      <div class="footer-wrapper twinkling">
-        <div class="container">
-          <div class="row no-gutters">
-            <div class="col-12 col-md-4">
-              <div class="row footer-social">
-                <div class="col-6 footer-social-item">
-                  <a
-                    href="https://github.com/rubenspessoa"
-                    target="_blank"
-                    aria-label="Github button"
-                  ><i class="fab fa-github"></i></a>
-                </div>
-                <div class="col-6 footer-social-item">
-                  <a
-                    href="https://www.linkedin.com/in/rubenspbf/"
-                    target="_blank"
-                    aria-label="Linkedin button"
-                  ><i class="fab fa-linkedin-in"></i></a>
-                </div>
-              </div>
-            </div>
-            <div class="col-12 col-md-4">
-              <div class="row footer-copyright">
-                <div class="col-12 col-md-4 footer-copyright-item">
-                  <a
-                    href="https://github.com/rubenspessoa/rubenspessoa.dev"
-                    target="_blank"
-                    aria-label="Repository button"
-                  >Handcrafted</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-12 col-md-4">
-              <div class="row footer-copyright">
-                <div class="col-12 col-md-4 footer-copyright-item">
-                  Design by <a
-                    href="http://www.styleshout.com/"
-                    target="_blank"
-                    aria-label="Design inspiration reference button"
-                  >styleshout</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
-  </main>
-</body>
+        </section>
 
+        <section
+          id="about"
+          class="section"
+        >
+          <div class="about-layout" data-reveal>
+            <div class="about-copy">
+              <p class="eyebrow">About</p>
+              <h2>Engineer first, builder by instinct.</h2>
+              <p>
+                I like turning product ideas into real, working software. Most of my work sits where native Apple
+                platform craft, product thinking, and iteration meet.
+              </p>
+              <p>
+                I build across iOS, iPadOS, macOS, and watchOS, with a particular interest in AI-powered apps,
+                thoughtful UX, and the tools that help teams move well. Originally from Brazil, now based in Graz,
+                Austria.
+              </p>
+              <ul class="about-list">
+                <li>
+                  <span>Focus</span>
+                  <strong>AI-powered apps, SwiftUI, product-minded engineering</strong>
+                </li>
+                <li>
+                  <span>Platforms</span>
+                  <strong>iOS, iPadOS, macOS, watchOS</strong>
+                </li>
+                <li>
+                  <span>Working with</span>
+                  <strong>Founders, product teams, and thoughtful collaborators</strong>
+                </li>
+              </ul>
+            </div>
+            <div class="about-portrait">
+              <div class="portrait-frame glass-panel">
+                <img
+                  src="images/first_original.webp"
+                  alt="Portrait of Rubens Pessoa"
+                >
+                <div class="portrait-note">
+                  <span>Based in Graz</span>
+                  <strong>Building apps, tools, and the next quiet bet.</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section
+          id="contact"
+          class="section section--contact"
+        >
+          <div class="contact-card glass-panel" data-reveal>
+            <div class="contact-card__copy">
+              <p class="eyebrow eyebrow--muted">Collaboration</p>
+              <h2>Open to the right conversations.</h2>
+              <p>
+                I work best with founders and teams who want to build something real on Apple platforms, especially
+                where product thinking matters as much as implementation. I keep collaborations selective so I can stay
+                close to the craft.
+              </p>
+            </div>
+            <div class="contact-card__actions">
+              <a
+                class="button button--primary"
+                href="mailto:contact@rubenspessoa.dev?subject=Project%20Inquiry"
+              >contact@rubenspessoa.dev</a>
+              <a
+                class="button button--ghost"
+                href="https://www.linkedin.com/in/rubenspbf/"
+                target="_blank"
+                rel="noreferrer"
+              >LinkedIn</a>
+              <a
+                class="button button--ghost"
+                href="https://github.com/rubenspessoa"
+                target="_blank"
+                rel="noreferrer"
+              >GitHub</a>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="site-footer__inner">
+          <p>Rubens Pessoa. Building AI-powered apps, developer tools, and thoughtful notes on the internet.</p>
+          <a href="#top">Back to top</a>
+        </div>
+      </footer>
+    </div>
+  </body>
 </html>
