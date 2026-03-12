@@ -455,12 +455,16 @@
                 type="email"
                 placeholder="Your email"
                 autocomplete="email"
+                inputmode="email"
+                required
+                aria-describedby="newsletter-feedback"
               >
               <button
                 class="button button--primary"
                 type="submit"
               >Join quietly</button>
               <p
+                id="newsletter-feedback"
                 class="newsletter-form__feedback"
                 data-newsletter-feedback
                 aria-live="polite"

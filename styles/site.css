@@ -21,6 +21,7 @@
   --radius-md: 18px;
   --radius-sm: 999px;
   --max-width: 1200px;
+  --header-offset: 7rem;
 }
 
 *,
@@ -93,15 +94,13 @@ input {
 
 .section {
   padding: 3.5rem 0;
-  scroll-margin-top: 7rem;
+  scroll-margin-top: var(--header-offset, 7rem);
 }
 
 .glass-panel {
   background: linear-gradient(180deg, var(--surface-strong) 0%, var(--surface) 100%);
   border: 1px solid rgba(255, 255, 255, 0.58);
   box-shadow: var(--shadow);
-  backdrop-filter: blur(26px) saturate(140%);
-  -webkit-backdrop-filter: blur(26px) saturate(140%);
 }
 
 .site-header {
@@ -609,8 +608,6 @@ input {
     linear-gradient(180deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.22)),
     rgba(255, 255, 255, 0.16);
   box-shadow: var(--shadow-soft);
-  backdrop-filter: blur(22px) saturate(140%);
-  -webkit-backdrop-filter: blur(22px) saturate(140%);
 }
 
 .device strong {
@@ -804,8 +801,23 @@ input {
   background: rgba(255, 255, 255, 0.56);
   border: 1px solid rgba(255, 255, 255, 0.64);
   box-shadow: var(--shadow-soft);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+}
+
+@supports ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .glass-panel {
+    backdrop-filter: blur(26px) saturate(140%);
+    -webkit-backdrop-filter: blur(26px) saturate(140%);
+  }
+
+  .device {
+    backdrop-filter: blur(22px) saturate(140%);
+    -webkit-backdrop-filter: blur(22px) saturate(140%);
+  }
+
+  .portrait-note {
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
 }
 
 .portrait-note span {
@@ -932,6 +944,10 @@ input {
 }
 
 @media (max-width: 860px) {
+  :root {
+    --header-offset: 9rem;
+  }
+
   .site-header__inner {
     flex-wrap: wrap;
     border-radius: 1.35rem;
@@ -964,6 +980,10 @@ input {
 }
 
 @media (max-width: 640px) {
+  :root {
+    --header-offset: 10rem;
+  }
+
   .section {
     padding: 2.6rem 0;
   }
