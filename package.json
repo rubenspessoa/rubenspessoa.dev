@@ -1,9 +1,10 @@
 {
-  "name": "rubenspessoa.github.io",
+  "name": "rubenspessoa.dev",
   "version": "1.0.0",
   "description": "Personal Website",
   "main": "index.js",
-  "repository": "https://github.com/rubenspessoa/rubenspessoa.github.io.git",
+  "repository": "https://github.com/rubenspessoa/rubenspessoa.dev.git",
+  "homepage": "https://rubenspessoa.dev/",
   "author": "Rubens Pessoa De Barros Filho <pessoadebarros@parkside.at>",
   "license": "MIT",
   "devDependencies": {
