@@ -3,6 +3,49 @@ const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)
 function initMobileNavigation() {
   const mobileMenuQuery = window.matchMedia("(max-width: 820px)");
   const headers = document.querySelectorAll(".site-header__inner");
+  const menus = [];
+
+  const setMenuState = (menu, isOpen) => {
+    const { header, toggle, nav } = menu;
+    const isMobileMenu = mobileMenuQuery.matches;
+    const shouldHideNav = isMobileMenu && !isOpen;
+
+    header.classList.toggle("is-menu-open", isMobileMenu && isOpen);
+    toggle.setAttribute("aria-expanded", isMobileMenu && isOpen ? "true" : "false");
+    toggle.setAttribute("aria-label", isMobileMenu && isOpen ? "Close navigation menu" : "Open navigation menu");
+
+    if (shouldHideNav) {
+      nav.setAttribute("aria-hidden", "true");
+    } else {
+      nav.removeAttribute("aria-hidden");
+    }
+
+    if ("inert" in nav) {
+      nav.inert = shouldHideNav;
+    }
+  };
+
+  const closeMenu = (menu) => {
+    setMenuState(menu, false);
+  };
+
+  const openMenu = (menu) => {
+    menus.forEach((candidate) => {
+      if (candidate !== menu) {
+        closeMenu(candidate);
+      }
+    });
+
+    setMenuState(menu, true);
+  };
+
+  const findOpenMenu = () => menus.find((menu) => menu.header.classList.contains("is-menu-open"));
+
+  const syncMenuState = () => {
+    menus.forEach((menu) => {
+      closeMenu(menu);
+    });
+  };
 
   headers.forEach((header, index) => {
     const toggle = header.querySelector(".site-nav-toggle");
@@ -17,60 +60,69 @@ function initMobileNavigation() {
       toggle.setAttribute("aria-controls", nav.id);
     }
 
-    const closeMenu = () => {
-      header.classList.remove("is-menu-open");
-      toggle.setAttribute("aria-expanded", "false");
-      toggle.setAttribute("aria-label", "Open navigation menu");
-    };
-
-    const syncMenuState = () => {
-      closeMenu();
-    };
+    const menu = { header, toggle, nav };
+    menus.push(menu);
 
     toggle.addEventListener("click", (event) => {
-      event.preventDefault();
       event.stopPropagation();
 
-      if (header.classList.contains("is-menu-open")) {
-        closeMenu();
+      if (!mobileMenuQuery.matches) {
         return;
       }
 
-      header.classList.add("is-menu-open");
-      toggle.setAttribute("aria-expanded", "true");
-      toggle.setAttribute("aria-label", "Close navigation menu");
+      if (header.classList.contains("is-menu-open")) {
+        closeMenu(menu);
+        return;
+      }
+
+      openMenu(menu);
     });
 
     nav.querySelectorAll("a").forEach((link) => {
       link.addEventListener("click", () => {
         if (mobileMenuQuery.matches) {
-          closeMenu();
+          closeMenu(menu);
         }
       });
     });
+  });
 
-    document.addEventListener("click", (event) => {
-      if (!mobileMenuQuery.matches || header.contains(event.target)) {
-        return;
-      }
-
-      closeMenu();
-    });
-
-    document.addEventListener("keydown", (event) => {
-      if (event.key === "Escape") {
-        closeMenu();
-      }
-    });
-
-    if (typeof mobileMenuQuery.addEventListener === "function") {
-      mobileMenuQuery.addEventListener("change", syncMenuState);
-    } else if (typeof mobileMenuQuery.addListener === "function") {
-      mobileMenuQuery.addListener(syncMenuState);
+  document.addEventListener("click", (event) => {
+    if (!mobileMenuQuery.matches) {
+      return;
     }
 
-    syncMenuState();
+    const openMenuInstance = findOpenMenu();
+
+    if (!openMenuInstance || openMenuInstance.header.contains(event.target)) {
+      return;
+    }
+
+    closeMenu(openMenuInstance);
   });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key !== "Escape" || !mobileMenuQuery.matches) {
+      return;
+    }
+
+    const openMenuInstance = findOpenMenu();
+
+    if (!openMenuInstance) {
+      return;
+    }
+
+    closeMenu(openMenuInstance);
+    openMenuInstance.toggle.focus();
+  });
+
+  if (typeof mobileMenuQuery.addEventListener === "function") {
+    mobileMenuQuery.addEventListener("change", syncMenuState);
+  } else if (typeof mobileMenuQuery.addListener === "function") {
+    mobileMenuQuery.addListener(syncMenuState);
+  }
+
+  syncMenuState();
 }
 
 function revealElements() {

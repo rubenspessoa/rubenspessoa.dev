@@ -21,7 +21,7 @@
   <path d="M354 116C398 130 434 156 454 192" stroke="url(#chipTrail)" stroke-width="12" stroke-linecap="round" />
 
   <g filter="url(#chipShadow)">
-    <image href="./nitpickr-mascot.png" x="90" y="96" width="322" height="322" transform="rotate(-8 251 257)" />
+    <image href="/images/nitpickr/nitpickr-reviewing.jpg" x="90" y="96" width="322" height="322" preserveAspectRatio="xMidYMid slice" transform="rotate(-8 251 257)" />
   </g>
 
   <g>
