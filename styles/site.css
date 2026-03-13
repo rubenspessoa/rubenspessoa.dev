@@ -638,6 +638,10 @@ section[id] {
   padding-top: 72px;
 }
 
+#start-here.section {
+  padding-top: 72px;
+}
+
 #about.section {
   padding-top: 76px;
   padding-bottom: 76px;
@@ -1334,6 +1338,7 @@ section[id] {
 .story-body {
   display: grid;
   gap: 24px;
+  max-width: 56rem;
 }
 
 .story-body h2 {
