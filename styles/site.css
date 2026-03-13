@@ -586,18 +586,6 @@ section[id] {
   animation: float-right 8.8s ease-in-out infinite;
 }
 
-.hero-phone--left .hero-phone__screen {
-  background-image: url("../images/screenshots/giorni.png");
-}
-
-.hero-phone--center .hero-phone__screen {
-  background-image: url("../images/screenshots/hustlrr.png");
-}
-
-.hero-phone--right .hero-phone__screen {
-  background-image: url("../images/screenshots/arbora.png");
-}
-
 .hero-tool {
   position: absolute;
   right: 46px;
@@ -1254,6 +1242,119 @@ section[id] {
   font-weight: 800;
 }
 
+.section--page-intro {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.breadcrumbs {
+  margin-bottom: 28px;
+}
+
+.breadcrumbs ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: var(--ink-muted);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.breadcrumbs li {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.breadcrumbs li + li::before {
+  content: "/";
+  color: rgba(17, 22, 28, 0.36);
+}
+
+.breadcrumbs a {
+  color: var(--accent-strong);
+}
+
+.page-lede {
+  max-width: 48rem;
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+.detail-grid--proof {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.detail-card {
+  gap: 18px;
+  align-content: start;
+}
+
+.detail-card h3,
+.story-body h2 {
+  margin: 0;
+  letter-spacing: -0.05em;
+  text-wrap: balance;
+}
+
+.detail-card h3 {
+  font-size: 1.38rem;
+  font-weight: 800;
+  line-height: 1.08;
+}
+
+.detail-card p,
+.story-meta,
+.story-body p,
+.story-list li {
+  color: var(--ink-soft);
+  font-size: 1rem;
+  line-height: 1.72;
+}
+
+.story-page .legal-card {
+  gap: 20px;
+}
+
+.story-meta {
+  margin: 0;
+  color: var(--ink-muted);
+}
+
+.story-body {
+  display: grid;
+  gap: 24px;
+}
+
+.story-body h2 {
+  font-size: clamp(1.9rem, 3vw, 2.5rem);
+  font-weight: 800;
+  line-height: 0.98;
+}
+
+.story-list {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.story-list li + li {
+  margin-top: 14px;
+}
+
+.phone-strip--story {
+  gap: 18px;
+}
+
 .site-footer {
   padding-bottom: var(--space-3);
 }
@@ -1781,6 +1882,15 @@ html.js .hero__actions {
     margin-bottom: 28px;
   }
 
+  .breadcrumbs {
+    margin-bottom: 22px;
+  }
+
+  .detail-grid,
+  .story-body {
+    gap: 18px;
+  }
+
   .about-grid {
     gap: 24px;
   }
@@ -1889,7 +1999,11 @@ html.js .hero__actions {
   .section-heading p,
   .product-card__summary,
   .experience-panel p,
-  .writing-card p {
+  .writing-card p,
+  .detail-card p,
+  .story-meta,
+  .story-body p,
+  .story-list li {
     font-size: 0.9rem;
   }
 
