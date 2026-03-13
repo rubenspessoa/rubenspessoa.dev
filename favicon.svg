@@ -9,8 +9,8 @@
       <stop offset="0" stop-color="#c9f2e6" stop-opacity="0.62" />
       <stop offset="1" stop-color="#c9f2e6" stop-opacity="0" />
     </linearGradient>
-    <linearGradient id="favicon-svg-bg" xlink:href="#rp-favicon-bg" />
-    <linearGradient id="favicon-svg-glow" xlink:href="#rp-favicon-glow" />
+    <linearGradient id="favicon-svg-bg" href="#rp-favicon-bg" xlink:href="#rp-favicon-bg" />
+    <linearGradient id="favicon-svg-glow" href="#rp-favicon-glow" xlink:href="#rp-favicon-glow" />
   </defs>
   <rect x="28" y="28" width="456" height="456" rx="132" fill="url(#rp-favicon-bg)" />
   <rect x="28" y="28" width="456" height="456" rx="132" fill="url(#rp-favicon-glow)" />
