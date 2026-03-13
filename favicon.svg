@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" aria-hidden="true">
   <defs>
     <linearGradient id="rp-favicon-bg" x1="64" y1="44" x2="448" y2="468" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#0f1d2a" />
@@ -9,6 +9,8 @@
       <stop offset="0" stop-color="#c9f2e6" stop-opacity="0.62" />
       <stop offset="1" stop-color="#c9f2e6" stop-opacity="0" />
     </linearGradient>
+    <linearGradient id="favicon-svg-bg" href="#rp-favicon-bg" />
+    <linearGradient id="favicon-svg-glow" href="#rp-favicon-glow" />
   </defs>
   <rect x="28" y="28" width="456" height="456" rx="132" fill="url(#rp-favicon-bg)" />
   <rect x="28" y="28" width="456" height="456" rx="132" fill="url(#rp-favicon-glow)" />
