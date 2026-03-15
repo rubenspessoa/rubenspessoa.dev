@@ -130,6 +130,7 @@
     <link
       rel="preconnect"
       href="https://fonts.googleapis.com"
+      crossorigin="anonymous"
     >
     <link
       rel="preconnect"
@@ -141,8 +142,13 @@
       href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap"
     >
     <link
+      rel="preload"
+      href="/styles/site.css"
+      as="style"
+    >
+    <link
       rel="stylesheet"
-      href="../styles/site.css"
+      href="/styles/site.css"
     >
     <title>Imprint | Rubens Pessoa</title>
     <script type="application/ld+json">
@@ -177,7 +183,7 @@
           >
             <img
               class="brand__avatar"
-              src="../images/1753387860689.jpeg"
+              src="/images/1753387860689.jpeg"
               alt=""
               width="96"
               height="96"
@@ -329,6 +335,6 @@
       </footer>
     </div>
 
-    <script src="../scripts/site.js"></script>
+    <script src="/scripts/site.js" defer></script>
   </body>
 </html>
