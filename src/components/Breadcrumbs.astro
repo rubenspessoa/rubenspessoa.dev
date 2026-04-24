@@ -1,0 +1,19 @@
+---
+interface Props {
+  items: Array<{ label: string; href?: string }>;
+}
+
+const { items } = Astro.props;
+---
+
+<nav class="breadcrumbs reveal" aria-label="Breadcrumb" data-reveal>
+  <ol>
+    {items.map((item, i) =>
+      i < items.length - 1 ? (
+        <li><a href={item.href}>{item.label}</a></li>
+      ) : (
+        <li aria-current="page">{item.label}</li>
+      )
+    )}
+  </ol>
+</nav>
