@@ -1,0 +1,73 @@
+---
+interface Props {
+  isHome?: boolean;
+}
+
+const { isHome = false } = Astro.props;
+---
+
+<footer class="site-footer" id="contact">
+  <div class="site-footer__top">
+    <div class="site-footer__brand">
+      <strong>Rubens Pessoa</strong>
+      <p>Apple apps, AI products, and the engineering around them.</p>
+    </div>
+
+    <div class="footer-links footer-links--icons" aria-label="Footer links">
+      <a
+        class="footer-link"
+        href="https://www.linkedin.com/in/rubenspbf/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <svg viewBox="0 0 17.5 17.5" aria-hidden="true">
+          <use href="#icon-linkedin"></use>
+        </svg>
+        <span>LinkedIn</span>
+      </a>
+      <a
+        class="footer-link"
+        href="https://github.com/rubenspessoa"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M9.5 18c-3 1-3-1.5-4.5-2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path>
+          <path d="M14.5 18v-2.6c0-.7.1-1.2-.3-1.7 2.3-.3 4.8-1.1 4.8-5.1 0-1.1-.4-2.1-1-2.8.1-.3.5-1.4-.1-2.8 0 0-.8-.3-2.9 1.1a10.2 10.2 0 0 0-5.4 0C7.5 3 6.7 3.3 6.7 3.3c-.6 1.4-.2 2.5-.1 2.8-.7.7-1 1.7-1 2.8 0 4 2.4 4.8 4.8 5.1-.4.5-.4 1.1-.4 1.7V18" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"></path>
+        </svg>
+        <span>GitHub</span>
+      </a>
+      <a
+        class="footer-link"
+        href="https://x.com/rubenspbf"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" fill="currentColor"></path>
+        </svg>
+        <span>X</span>
+      </a>
+      <a
+        class="footer-link"
+        href="https://apps.apple.com/us/developer/rubens-pessoa-de-barros-filho/id1703452695?uo=4"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <svg class="link-icon link-icon--external" viewBox="0 0 20 20" aria-hidden="true">
+          <use href="#icon-arrow-up-right"></use>
+        </svg>
+        <span>App Store</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-footer__contact">
+    <a href="mailto:contact@rubenspessoa.dev">contact@rubenspessoa.dev</a>
+  </div>
+
+  <div class="site-footer__bottom">
+    <p>Built in Graz, Austria.</p>
+    <a href={isHome ? "#top" : "/"}>{ isHome ? "Back to top" : "Back to home" }</a>
+  </div>
+</footer>

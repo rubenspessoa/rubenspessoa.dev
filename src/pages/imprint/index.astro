@@ -1,0 +1,65 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://rubenspessoa.dev/" },
+    { "@type": "ListItem", "position": 2, "name": "Imprint", "item": "https://rubenspessoa.dev/imprint/" }
+  ]
+};
+---
+
+<BaseLayout
+  title="Imprint | Rubens Pessoa"
+  description="Imprint, legal notice, and contact information for Rubens Pessoa, an Apple app engineer based in Graz, Austria."
+  canonicalUrl="https://rubenspessoa.dev/imprint/"
+  mainClass="page-main"
+  jsonLd={jsonLd}
+>
+  <section class="section section--legal section--page-intro">
+    <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Imprint" }]} />
+
+    <div class="section-heading reveal" data-reveal>
+      <p class="eyebrow">Legal</p>
+      <h1 class="page-title">Imprint</h1>
+      <p>Responsible for the content on this website.</p>
+    </div>
+
+    <div class="legal-card legal-card--wide reveal" data-reveal>
+      <div class="legal-card__grid">
+        <div class="legal-card__column">
+          <address>
+            <strong>Rubens Pessoa de Barros Filho, BSc</strong><br>
+            UNESCO-Esplanade 8/55<br>
+            8020 Graz<br>
+            Austria
+          </address>
+
+          <p>
+            Phone number: +43 677 63041761<br>
+            <a href="mailto:contact@rubenspessoa.dev">contact@rubenspessoa.dev</a>
+          </p>
+        </div>
+
+        <div class="legal-card__column">
+          <p>
+            Softwareentwickler<br>
+            Mitglied der WK&Ouml;, WKSt, Fachgruppe f&uuml;r Datenverarbeitung und Informationstechnik<br>
+            Gewerbeordnung:
+            <a href="https://www.ris.bka.gv.at" target="_blank" rel="noopener noreferrer">www.ris.bka.gv.at</a>
+          </p>
+
+          <p>
+            Verbraucher haben die M&ouml;glichkeit, Beschwerden an die Online-Streitbeilegungsplattform der EU zu
+            richten:
+            <a href="http://ec.europa.eu/odr" target="_blank" rel="noopener noreferrer">http://ec.europa.eu/odr</a>.<br>
+            Allf&auml;llige Beschwerden k&ouml;nnen auch an die oben angegebene E-Mail-Adresse gerichtet werden.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
