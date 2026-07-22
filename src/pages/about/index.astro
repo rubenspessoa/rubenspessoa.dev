@@ -1,0 +1,73 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "mainEntity": {
+    "@type": "Person",
+    "@id": "https://rubenspessoa.dev/#person",
+    "name": "Rubens Pessoa",
+    "url": "https://rubenspessoa.dev/",
+    "image": "https://rubenspessoa.dev/images/1753387860689.jpeg",
+    "jobTitle": "Founder",
+    "description": "Independent founder building apps for iPhone, iPad, and Mac.",
+    "email": "mailto:contact@rubenspessoa.dev",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Graz",
+      "addressCountry": "AT"
+    },
+    "sameAs": [
+      "https://github.com/rubenspessoa",
+      "https://www.linkedin.com/in/rubenspbf/",
+      "https://x.com/rubenspbf",
+      "https://apps.apple.com/us/developer/rubens-pessoa-de-barros-filho/id1703452695?uo=4"
+    ]
+  }
+};
+---
+
+<BaseLayout
+  title="About | Rubens Pessoa"
+  description="Rubens Pessoa is an independent founder in Graz, Austria, making apps for iPhone, iPad, and Mac."
+  canonicalUrl="https://rubenspessoa.dev/about/"
+  jsonLd={jsonLd}
+>
+  <article class="prose-page">
+    <img
+      class="about-portrait"
+      src="/images/1753387860689.jpeg"
+      alt="Portrait of Rubens Pessoa"
+      width="256"
+      height="256"
+      loading="eager"
+      decoding="async"
+    >
+
+    <p class="kicker">About</p>
+    <h1>Founder of small, careful apps.</h1>
+
+    <div class="prose">
+      <p>
+        I&rsquo;m Rubens, a Brazilian founder living in Graz, Austria. I make apps for iPhone,
+        iPad, and Mac &mdash; each one designed, built, and looked after by me, end to end.
+      </p>
+      <p>
+        I started building products because I care about how software feels in daily use. The apps
+        I make are small on purpose: one clear job each, native to the platform, respectful of
+        your attention and your data. Working alone keeps them honest &mdash; every decision, from
+        the first sketch to the App Store release, has one person accountable for it.
+      </p>
+      <p>
+        Outside of work I&rsquo;m usually on a bike, learning to ski, or playing the guitar I
+        never quite put down after years in a band. I&rsquo;m married to a brilliant engineer, so
+        home is basically a happy nerdy two-person lab.
+      </p>
+      <p>
+        If you want to talk about any of the apps &mdash; or just say hello &mdash; write me at
+        <a href="mailto:contact@rubenspessoa.dev">contact@rubenspessoa.dev</a>.
+      </p>
+    </div>
+  </article>
+</BaseLayout>

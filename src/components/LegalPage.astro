@@ -1,0 +1,29 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+interface Props {
+  appName: string;
+  docTitle: string;
+  description: string;
+  canonicalUrl: string;
+  effectiveDate: string;
+}
+
+const { appName, docTitle, description, canonicalUrl, effectiveDate } = Astro.props;
+---
+
+<BaseLayout
+  title={`${appName} ${docTitle} | Rubens Pessoa`}
+  description={description}
+  canonicalUrl={canonicalUrl}
+>
+  <article class="prose-page">
+    <p class="kicker">{appName}</p>
+    <h1>{docTitle}</h1>
+    <p class="doc-meta">Effective date: {effectiveDate}</p>
+
+    <div class="prose">
+      <slot />
+    </div>
+  </article>
+</BaseLayout>

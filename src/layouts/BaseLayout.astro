@@ -13,13 +13,8 @@ interface Props {
   ogType?: string;
   ogImage?: string;
   ogImageAlt?: string;
-  twitterCard?: string;
   robots?: string;
   jsonLd?: object;
-  mainClass?: string;
-  mainId?: string;
-  shellClass?: string;
-  isHome?: boolean;
 }
 
 const {
@@ -30,14 +25,9 @@ const {
   ogDescription,
   ogType = 'website',
   ogImage = 'https://rubenspessoa.dev/images/seo/social-card.png',
-  ogImageAlt = 'Portrait of Rubens Pessoa beside the text Apple apps, AI products, and the engineering around them.',
-  twitterCard = 'summary_large_image',
+  ogImageAlt = 'Portrait of Rubens Pessoa, founder building apps for iPhone, iPad, and Mac.',
   robots = 'index,follow,max-image-preview:large',
   jsonLd,
-  mainClass,
-  mainId,
-  shellClass,
-  isHome = false,
 } = Astro.props;
 
 const resolvedOgTitle = ogTitle ?? title;
@@ -52,7 +42,8 @@ const resolvedOgDescription = ogDescription ?? description;
     <meta name="description" content={description}>
     <meta name="author" content="Rubens Pessoa">
     <meta name="robots" content={robots}>
-    <meta name="theme-color" content="#f1f6f3">
+    <meta name="theme-color" content="#fcfcfa" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#131416" media="(prefers-color-scheme: dark)">
     <meta property="og:locale" content="en_US">
     <meta property="og:site_name" content="Rubens Pessoa">
     <meta property="og:title" content={resolvedOgTitle}>
@@ -63,7 +54,7 @@ const resolvedOgDescription = ogDescription ?? description;
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content={ogImageAlt}>
-    <meta name="twitter:card" content={twitterCard}>
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content={resolvedOgTitle}>
     <meta name="twitter:description" content={resolvedOgDescription}>
     <meta name="twitter:image" content={ogImage}>
@@ -77,10 +68,6 @@ const resolvedOgDescription = ogDescription ?? description;
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#10161d">
     <link rel="manifest" href="/site.webmanifest">
-    <script is:inline>document.documentElement.classList.add("js");</script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=Manrope:wght@400;500;600;700;800&display=swap">
     <title>{title}</title>
     {jsonLd && (
       <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
@@ -88,13 +75,12 @@ const resolvedOgDescription = ogDescription ?? description;
   </head>
   <body>
     <SvgSprite />
-    <div class:list={["page-shell", shellClass]}>
-      <Header isHome={isHome} />
-      <main id={mainId} class={mainClass}>
+    <div class="page-shell">
+      <Header />
+      <main>
         <slot />
       </main>
-      <Footer isHome={isHome} />
+      <Footer />
     </div>
-    <script is:inline src="/scripts/site.js"></script>
   </body>
 </html>

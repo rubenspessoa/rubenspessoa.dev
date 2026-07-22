@@ -1,50 +1,12 @@
 ---
-interface Props {
-  isHome?: boolean;
-}
-
-const { isHome = false } = Astro.props;
+const currentPath = Astro.url.pathname;
 ---
 
 <header class="site-header">
-  <div class="site-header__inner">
-    <a
-      class="brand"
-      href={isHome ? "#top" : "/"}
-      aria-label="Rubens Pessoa home"
-    >
-      <img
-        class="brand__avatar"
-        src="/images/1753387860689.jpeg"
-        alt=""
-        width="96"
-        height="96"
-        loading="eager"
-        decoding="async"
-      >
-      <span class="brand__text">Rubens Pessoa</span>
-    </a>
+  <a class="brand" href="/">Rubens Pessoa</a>
 
-    <button
-      class="site-nav-toggle"
-      type="button"
-      aria-expanded="false"
-      aria-controls="site-nav-primary"
-      aria-label="Open navigation menu"
-    >
-      <svg class="site-nav-toggle__icon" viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.9"></path>
-      </svg>
-    </button>
-
-    <nav
-      id="site-nav-primary"
-      class="site-nav"
-      aria-label="Primary"
-    >
-      <a href={isHome ? "#work" : "/#work"}>Work</a>
-      <a href="mailto:contact@rubenspessoa.dev">Contact</a>
-      <a href="/imprint/">Imprint</a>
-    </nav>
-  </div>
+  <nav class="site-nav" aria-label="Primary">
+    <a href="/#apps">Apps</a>
+    <a href="/about/" aria-current={currentPath.startsWith('/about') ? 'page' : undefined}>About</a>
+  </nav>
 </header>

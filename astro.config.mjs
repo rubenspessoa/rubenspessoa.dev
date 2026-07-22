@@ -7,6 +7,11 @@ export default defineConfig({
   integrations: [sitemap()],
   redirects: {
     '/apple-app-engineer/': '/',
+    '/ios-consulting/': '/',
+    '/swiftui-consulting/': '/',
+    '/case-studies/hustlrr/': '/',
+    '/case-studies/giorni/': '/',
+    '/case-studies/arbora/': '/',
   },
   build: {
     format: 'directory',
