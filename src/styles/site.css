@@ -18,7 +18,7 @@
   --radius: 12px;
   --radius-lg: 20px;
   --measure: 42rem;
-  --wide: 60rem;
+  --wide: 52rem;
   --font:
     -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto,
     "Helvetica Neue", Arial, sans-serif;
@@ -263,7 +263,6 @@ main {
 }
 
 .app__summary {
-  max-width: var(--measure);
   color: var(--ink-soft);
   text-wrap: pretty;
 }
@@ -327,7 +326,6 @@ main {
 /* ===== Also built ===== */
 
 .also-built {
-  max-width: var(--measure);
   color: var(--ink-muted);
   font-size: 0.95rem;
 }
