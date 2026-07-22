@@ -230,19 +230,6 @@ main {
   text-wrap: pretty;
 }
 
-.app__shots {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
-  max-width: 34rem;
-}
-
-.app__shots img {
-  width: 100%;
-  border-radius: var(--radius);
-  border: 1px solid var(--line-soft);
-}
-
 .app__actions {
   display: flex;
   flex-wrap: wrap;
@@ -429,10 +416,6 @@ main {
 @media (max-width: 640px) {
   .hero {
     padding: 3.5rem 0 3rem;
-  }
-
-  .app__shots {
-    max-width: none;
   }
 
   .site-footer {
