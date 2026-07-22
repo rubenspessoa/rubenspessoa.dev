@@ -264,22 +264,6 @@ main {
   color: var(--ink-muted);
 }
 
-.app__legal {
-  display: flex;
-  gap: 0.35rem;
-  font-size: 0.85rem;
-  color: var(--ink-muted);
-}
-
-.app__legal a {
-  color: inherit;
-  text-underline-offset: 0.2em;
-}
-
-.app__legal a:hover {
-  color: var(--ink);
-}
-
 /* ===== Text links ===== */
 
 .text-link {

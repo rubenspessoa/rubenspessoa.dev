@@ -1,0 +1,177 @@
+---
+import LegalPage from '../../components/LegalPage.astro';
+---
+
+<LegalPage
+  appName="Legal"
+  docTitle="Privacy Policy"
+  description="How the apps of Rubens Pessoa de Barros Filho e.U (Save My Cactus, Hustlrr, Giorni, Appelou) handle your data, and the rights you have."
+  canonicalUrl="https://rubenspessoa.dev/privacy/"
+  effectiveDate="July 22, 2026"
+>
+  <p>
+    This policy covers all apps published by Rubens Pessoa de Barros Filho e.U &mdash; currently
+    <strong>Save My Cactus</strong>, <strong>Hustlrr</strong>, <strong>Giorni</strong>, and
+    <strong>Appelou</strong> &mdash; and this website. It explains what data is processed, why,
+    who processes it, and the rights you have.
+  </p>
+  <p>
+    The short version: the apps work without accounts, your content stays on your device (and in
+    your own iCloud, if you use it), payments run through Apple, and we do not sell your personal
+    data.
+  </p>
+
+  <h2>Who is responsible</h2>
+  <p>
+    Rubens Pessoa de Barros Filho e.U
+    <br />
+    UNESCO-Esplanade 8/55, 8020 Graz, Austria
+    <br />
+    Email: <a href="mailto:contact@rubenspessoa.dev">contact@rubenspessoa.dev</a>
+  </p>
+  <p>
+    See the <a href="/imprint/">imprint</a> for full legal details.
+  </p>
+
+  <h2>What each app processes</h2>
+
+  <h3>Save My Cactus</h3>
+  <p>
+    When you identify or diagnose a plant, your photo is sent to our servers and processed through
+    the API of a specialized third-party AI service, solely to generate the result. The photo
+    carries no account identifier, is not used to train AI models under our API agreements, and is
+    not stored on our servers: it is processed in memory and discarded. Photos you save in the app
+    stay on your device and in your own iCloud. The app creates an anonymous identifier via
+    Firebase to enforce fair usage limits and connect your subscription to your installation; we
+    cannot identify you personally from it.
+  </p>
+
+  <h3>Hustlrr</h3>
+  <p>
+    The content of your conversations &mdash; text, uploaded documents, and text transcribed from
+    voice input &mdash; is sent through our servers to the AI provider behind the model you
+    selected (currently OpenAI and Anthropic), solely to generate the response. This content is
+    not used to train AI models under our API agreements, and our servers do not keep a copy of
+    your conversations. Your chat history is stored on your device and, if you use iCloud, synced
+    through your own private iCloud storage. Requests are verified with Firebase App Check to keep
+    bots away; no account is involved.
+  </p>
+
+  <h3>Giorni</h3>
+  <p>
+    Your habits, completions, focus sessions, and notes stay on your device and, if you use
+    iCloud, in your own private iCloud storage. We operate no server for Giorni, and reminders are
+    local notifications scheduled on your device. Analytics events (feature usage, not the content
+    of your habits) are the only data that leaves the app.
+  </p>
+
+  <h3>Appelou</h3>
+  <p>
+    Your product searches are sent to our servers to return matching offers. With your permission,
+    the app uses your device location to show offers from stores near you; location is used at
+    query time and is not stored as a movement history. The free tier shows ads served by Google
+    AdMob: if you allow tracking in the iOS App Tracking Transparency prompt, ads may be
+    personalized; if you decline, they are not. AppsFlyer processes device identifiers to
+    attribute app installs to marketing campaigns, subject to the same tracking choice.
+  </p>
+
+  <h3>This website and app websites</h3>
+  <p>
+    This website (rubenspessoa.dev) is static and sets no cookies and runs no analytics. Some app
+    websites use analytics and, where required, ask for cookie consent; their processing is
+    covered by the services listed below.
+  </p>
+
+  <h2>Third-party services</h2>
+  <p>
+    We keep the list of processors as small as each app allows. Not every service is used by every
+    app:
+  </p>
+  <ul>
+    <li>Apple (USA): App Store distribution, payments, device services, iCloud</li>
+    <li>
+      Google Firebase (USA/Ireland): server infrastructure (Cloud Functions), app verification
+      (App Check), analytics, and crash reporting (Crashlytics)
+    </li>
+    <li>RevenueCat (USA): subscription status, keyed to anonymous identifiers</li>
+    <li>OpenAI (USA) and Anthropic (USA): generating responses in Hustlrr</li>
+    <li>AI service providers (USA): analysis of plant photos in Save My Cactus</li>
+    <li>PostHog (EU-hosted): product analytics for Save My Cactus</li>
+    <li>TelemetryDeck (Germany): anonymized product analytics for Hustlrr and Giorni</li>
+    <li>Amplitude (USA): product analytics for Giorni</li>
+    <li>Sentry (USA): crash and error reporting for Hustlrr</li>
+    <li>Google AdMob (USA): advertising in Appelou</li>
+    <li>AppsFlyer (USA/EU) and Adjust (Germany): install attribution</li>
+    <li>Algolia (USA): product search in Appelou</li>
+    <li>Google Analytics (USA/Ireland): analytics on some app websites</li>
+  </ul>
+
+  <h2>Legal bases</h2>
+  <p>
+    Under the GDPR (and the corresponding bases of the Brazilian LGPD) we process data based on:
+    <strong>performance of a contract</strong> (providing the app features you use and your
+    subscription), <strong>legitimate interest</strong> (product analytics, crash reporting, abuse
+    prevention, non-personalized ads), <strong>consent</strong> (location access, personalized
+    advertising, tracking-based attribution), and <strong>legal obligation</strong> where
+    applicable.
+  </p>
+
+  <h2>International transfers</h2>
+  <p>
+    Where providers are located in the USA or other countries outside the EU, transfers rely on
+    the EU-US Data Privacy Framework, Standard Contractual Clauses, or equivalent safeguards
+    (including those recognized by the LGPD for users in Brazil).
+  </p>
+
+  <h2>How long data is kept</h2>
+  <p>
+    Personal data is processed and stored only as long as required by the purpose it was collected
+    for: photos and conversations are not retained on our servers at all; rate-limit and usage
+    counters expire automatically within days; analytics, attribution, and crash data follow the
+    retention settings of the respective tool. Once the retention period expires, data is deleted.
+  </p>
+
+  <h2>Your rights</h2>
+  <p>
+    Depending on where you live, you have the right to access, rectify, delete, restrict, or
+    receive a copy of your data, to object to processing based on legitimate interest, and to
+    withdraw consent at any time (for tracking and location, directly in iOS Settings).
+  </p>
+  <ul>
+    <li>
+      <strong>EU/EEA and Switzerland:</strong> the rights above under the GDPR and Swiss FADP, and
+      the right to complain to the Austrian Data Protection Authority (
+      <a href="https://www.dsb.gv.at" target="_blank" rel="noopener noreferrer">dsb.gv.at</a>) or
+      your local supervisory authority.
+    </li>
+    <li>
+      <strong>Brazil:</strong> the rights of the LGPD, including confirmation of processing,
+      anonymization or elimination of unnecessary data, information about sharing, review of
+      automated decisions, and the right to complain to the ANPD.
+    </li>
+    <li>
+      <strong>United States:</strong> where state privacy laws apply, the right to know, correct,
+      delete, and port your data, to opt out of the sale or sharing of personal information and of
+      targeted advertising, and to non-discrimination for exercising these rights. The tracking
+      consent in iOS Settings is the most direct opt-out for ad-related sharing.
+    </li>
+  </ul>
+  <p>
+    Because we hold no account for you, exercising these rights works by email: write to
+    <a href="mailto:contact@rubenspessoa.dev">contact@rubenspessoa.dev</a>.
+  </p>
+
+  <h2>Children</h2>
+  <p>
+    Our apps are not directed at children under 14 (or under 13 in the United States), and we do
+    not knowingly collect data from them. If you believe a child has provided us data, contact us
+    and we will delete it.
+  </p>
+
+  <h2>Changes</h2>
+  <p>
+    If we change this policy, we will update it here with a new effective date and, as far as
+    technically and legally feasible, notify you in the affected app. Where changes affect
+    processing based on your consent, we will collect new consent where required.
+  </p>
+</LegalPage>
