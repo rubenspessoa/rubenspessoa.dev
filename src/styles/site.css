@@ -1,15 +1,20 @@
 /* rubenspessoa.dev — minimal founder/product site */
 
 :root {
-  --bg: #fcfcfa;
-  --ink: #1a1c1e;
-  --ink-soft: #45494e;
-  --ink-muted: #71767c;
-  --line: rgba(26, 28, 30, 0.12);
-  --line-soft: rgba(26, 28, 30, 0.07);
-  --card: #ffffff;
+  --bg: #fbfaf7;
+  --ink: #17181a;
+  --ink-soft: #44484d;
+  --ink-muted: #6e7379;
+  --line: rgba(23, 24, 26, 0.12);
+  --line-soft: rgba(23, 24, 26, 0.07);
+  --card: #fffefc;
   --accent: #14706a;
   --focus: #2f63e0;
+  --shadow-card:
+    0 1px 2px rgba(17, 18, 20, 0.03),
+    0 12px 32px rgba(17, 18, 20, 0.04);
+  --icon-ring: rgba(0, 0, 0, 0.06);
+  --grain-opacity: 0.025;
   --radius: 12px;
   --radius-lg: 20px;
   --measure: 42rem;
@@ -17,19 +22,25 @@
   --font:
     -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto,
     "Helvetica Neue", Arial, sans-serif;
+  --font-display:
+    -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #131416;
+    --bg: #141517;
     --ink: #e8e8e6;
     --ink-soft: #b5b8bc;
-    --ink-muted: #8b9096;
-    --line: rgba(232, 232, 230, 0.16);
-    --line-soft: rgba(232, 232, 230, 0.09);
-    --card: #1b1d1f;
+    --ink-muted: #8d9298;
+    --line: rgba(232, 232, 230, 0.17);
+    --line-soft: rgba(232, 232, 230, 0.1);
+    --card: #1c1d20;
     --accent: #4cc2b9;
     --focus: #7ea6ff;
+    --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.2);
+    --icon-ring: rgba(255, 255, 255, 0.08);
+    --grain-opacity: 0.02;
   }
 }
 
@@ -54,6 +65,18 @@ body {
   color: var(--ink);
   background: var(--bg);
   -webkit-font-smoothing: antialiased;
+}
+
+/* Paper-grain texture: static SVG noise, ~500 bytes, no requests */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: var(--grain-opacity);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 180px 180px;
 }
 
 img {
@@ -86,6 +109,8 @@ p {
 
 a {
   color: inherit;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
 }
 
 :focus-visible {
@@ -121,7 +146,7 @@ main {
   width: 100%;
   max-width: var(--wide);
   margin: 0 auto;
-  padding: 1.75rem 0;
+  padding: 2rem 0;
   display: flex;
   align-items: baseline;
   justify-content: space-between;
@@ -142,7 +167,7 @@ main {
 .site-nav a {
   text-decoration: none;
   color: var(--ink-muted);
-  transition: color 120ms ease;
+  transition: color 150ms ease-out;
 }
 
 .site-nav a:hover,
@@ -153,18 +178,22 @@ main {
 /* ===== Hero ===== */
 
 .hero {
-  padding: 5rem 0 4.5rem;
+  padding: 6rem 0 5rem;
 }
 
 .hero h1 {
   max-width: 21ch;
-  font-size: clamp(2.1rem, 5.5vw, 3.25rem);
+  font-family: var(--font-display);
+  font-size: clamp(2.1rem, 5.5vw, 3.4rem);
+  letter-spacing: -0.022em;
+  line-height: 1.08;
 }
 
 .hero__lede {
-  margin-top: 1.25rem;
+  margin-top: 1.5rem;
   max-width: var(--measure);
   font-size: 1.15rem;
+  line-height: 1.6;
   color: var(--ink-soft);
   text-wrap: pretty;
 }
@@ -176,11 +205,11 @@ main {
 }
 
 .section > h2 {
-  font-size: 1.05rem;
-  font-weight: 600;
+  font-size: 0.8rem;
+  font-weight: 590;
   color: var(--ink-muted);
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.1em;
   margin-bottom: 2rem;
 }
 
@@ -189,17 +218,24 @@ main {
 .app-list {
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;
+  gap: 2rem;
 }
 
 .app {
   border: 1px solid var(--line-soft);
   border-radius: var(--radius-lg);
   background: var(--card);
-  padding: clamp(1.5rem, 4vw, 2.5rem);
+  box-shadow: var(--shadow-card);
+  padding: clamp(1.75rem, 4vw, 2.75rem);
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+}
+
+@media (min-resolution: 2dppx) {
+  .app {
+    border-width: 0.5px;
+  }
 }
 
 .app__head {
@@ -211,8 +247,10 @@ main {
 .app__icon {
   width: 64px;
   height: 64px;
-  border-radius: 14px;
-  border: 1px solid var(--line-soft);
+  border-radius: 15px;
+  box-shadow:
+    inset 0 0 0 1px var(--icon-ring),
+    0 2px 8px rgba(17, 18, 20, 0.08);
 }
 
 .app__title h3 {
@@ -242,6 +280,14 @@ main {
   width: auto;
 }
 
+.app-store-link {
+  transition: opacity 150ms ease-out;
+}
+
+.app-store-link:hover {
+  opacity: 0.85;
+}
+
 .badge {
   display: inline-block;
   padding: 0.2rem 0.7rem;
@@ -264,12 +310,18 @@ main {
 
 .text-link:hover span {
   text-decoration: underline;
-  text-underline-offset: 0.2em;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
 }
 
 .text-link .link-icon {
   width: 0.8em;
   height: 0.8em;
+  transition: transform 150ms ease-out;
+}
+
+.text-link:hover .link-icon {
+  transform: translate(1px, -1px);
 }
 
 /* ===== Also built ===== */
@@ -298,16 +350,18 @@ main {
 }
 
 .kicker {
-  font-size: 0.9rem;
-  font-weight: 600;
+  font-size: 0.8rem;
+  font-weight: 590;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.1em;
   color: var(--ink-muted);
   margin-bottom: 0.75rem;
 }
 
 .prose-page h1 {
+  font-family: var(--font-display);
   font-size: clamp(1.9rem, 4.5vw, 2.5rem);
+  letter-spacing: -0.022em;
 }
 
 .doc-meta {
@@ -341,7 +395,8 @@ main {
 
 .prose a {
   color: var(--accent);
-  text-underline-offset: 0.2em;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
 }
 
 .prose strong {
@@ -373,7 +428,7 @@ main {
   width: 100%;
   max-width: var(--wide);
   margin: 0 auto;
-  padding: 2.5rem 0 3rem;
+  padding: 3rem 0 3.5rem;
   border-top: 1px solid var(--line-soft);
   display: flex;
   flex-wrap: wrap;
@@ -387,6 +442,7 @@ main {
 .site-footer a {
   color: inherit;
   text-decoration: none;
+  transition: color 150ms ease-out;
 }
 
 .site-footer a:hover {
