@@ -1,3 +1,16 @@
+---
+import { ui, localeNames, pathForLocale, type Locale } from '../i18n/ui';
+
+interface Props {
+  locale?: Locale;
+}
+
+const { locale = 'en' } = Astro.props;
+const t = ui[locale];
+const currentPath = Astro.url.pathname;
+const locales = Object.keys(localeNames) as Locale[];
+---
+
 <footer class="site-footer">
   <div class="footer-links" aria-label="Footer links">
     <a class="footer-link" href="mailto:contact@rubenspessoa.dev">contact@rubenspessoa.dev</a>
@@ -49,9 +62,59 @@
   </div>
 
   <div class="footer-links">
-    <a href="/privacy/">Privacy</a>
-    <a href="/terms/">Terms</a>
-    <a href="/imprint/">Imprint</a>
-    <span>Built in Graz, Austria.</span>
+    <a href="/privacy/">{t.footer.privacy}</a>
+    <a href="/terms/">{t.footer.terms}</a>
+    <a href="/imprint/">{t.footer.imprint}</a>
+    <span>{t.footer.builtIn}</span>
+  </div>
+
+  <div class="footer-links">
+    <nav class="footer-links lang-switch" aria-label="Language">
+      {locales.map((l) => (
+        <a href={pathForLocale(currentPath, l)} aria-current={l === locale ? 'true' : undefined} lang={l === 'pt-br' ? 'pt-BR' : l}>
+          {localeNames[l]}
+        </a>
+      ))}
+    </nav>
+    <button
+      class="theme-toggle"
+      id="theme-toggle"
+      type="button"
+      data-labels={JSON.stringify(t.footer.themeLabels)}
+      data-name={t.footer.themeName}
+    ></button>
   </div>
 </footer>
+
+<script is:inline>
+  (() => {
+    const btn = document.getElementById('theme-toggle');
+    if (!btn) return;
+    const labels = JSON.parse(btn.dataset.labels);
+    const name = btn.dataset.name;
+    const order = ['auto', 'light', 'dark'];
+    const root = document.documentElement;
+    const current = () => {
+      try {
+        const v = localStorage.getItem('theme');
+        return v === 'light' || v === 'dark' ? v : 'auto';
+      } catch {
+        return 'auto';
+      }
+    };
+    const apply = (v) => {
+      if (v === 'auto') delete root.dataset.theme;
+      else root.dataset.theme = v;
+      btn.textContent = `${name}: ${labels[v]}`;
+    };
+    apply(current());
+    btn.addEventListener('click', () => {
+      const next = order[(order.indexOf(current()) + 1) % order.length];
+      try {
+        if (next === 'auto') localStorage.removeItem('theme');
+        else localStorage.setItem('theme', next);
+      } catch {}
+      apply(next);
+    });
+  })();
+</script>

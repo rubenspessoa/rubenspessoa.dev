@@ -1,19 +1,25 @@
 /* rubenspessoa.dev — minimal founder/product site */
 
+/*
+  Theme system: every color is declared once with light-dark().
+  The active scheme follows the OS by default; a manual choice sets
+  data-theme on <html>, which forces color-scheme and flips everything.
+*/
 :root {
-  --bg: #fbfaf7;
-  --ink: #17181a;
-  --ink-soft: #44484d;
-  --ink-muted: #6e7379;
-  --line: rgba(23, 24, 26, 0.12);
-  --line-soft: rgba(23, 24, 26, 0.07);
-  --card: #fffefc;
-  --accent: #14706a;
-  --focus: #2f63e0;
+  color-scheme: light dark;
+  --bg: light-dark(#fbfaf7, #141517);
+  --ink: light-dark(#17181a, #e8e8e6);
+  --ink-soft: light-dark(#44484d, #b5b8bc);
+  --ink-muted: light-dark(#6e7379, #8d9298);
+  --line: light-dark(rgba(23, 24, 26, 0.12), rgba(232, 232, 230, 0.17));
+  --line-soft: light-dark(rgba(23, 24, 26, 0.07), rgba(232, 232, 230, 0.1));
+  --card: light-dark(#fffefc, #1c1d20);
+  --accent: light-dark(#14706a, #4cc2b9);
+  --focus: light-dark(#2f63e0, #7ea6ff);
   --shadow-card:
-    0 1px 2px rgba(17, 18, 20, 0.03),
-    0 12px 32px rgba(17, 18, 20, 0.04);
-  --icon-ring: rgba(0, 0, 0, 0.06);
+    0 1px 2px light-dark(rgba(17, 18, 20, 0.03), rgba(0, 0, 0, 0.2)),
+    0 12px 32px light-dark(rgba(17, 18, 20, 0.04), rgba(0, 0, 0, 0));
+  --icon-ring: light-dark(rgba(0, 0, 0, 0.06), rgba(255, 255, 255, 0.08));
   --grain-opacity: 0.11;
   --radius: 12px;
   --radius-lg: 20px;
@@ -27,21 +33,23 @@
     "Helvetica Neue", Arial, sans-serif;
 }
 
+:root[data-theme="light"] {
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+}
+
+/* Grain opacity is a number, not a color, so it needs explicit dark rules */
 @media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #141517;
-    --ink: #e8e8e6;
-    --ink-soft: #b5b8bc;
-    --ink-muted: #8d9298;
-    --line: rgba(232, 232, 230, 0.17);
-    --line-soft: rgba(232, 232, 230, 0.1);
-    --card: #1c1d20;
-    --accent: #4cc2b9;
-    --focus: #7ea6ff;
-    --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.2);
-    --icon-ring: rgba(255, 255, 255, 0.08);
+  :root:not([data-theme="light"]) {
     --grain-opacity: 0.1;
   }
+}
+
+:root[data-theme="dark"] {
+  --grain-opacity: 0.1;
 }
 
 /* ===== Reset ===== */
@@ -463,6 +471,26 @@ main {
 .footer-link svg {
   width: 1em;
   height: 1em;
+}
+
+.lang-switch a[aria-current="true"] {
+  color: var(--ink);
+  font-weight: 550;
+}
+
+.theme-toggle {
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: var(--ink-muted);
+  cursor: pointer;
+  transition: color 150ms ease-out;
+}
+
+.theme-toggle:hover {
+  color: var(--ink);
 }
 
 /* ===== Small screens ===== */

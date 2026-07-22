@@ -3,6 +3,7 @@ import '../styles/site.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import SvgSprite from '../components/SvgSprite.astro';
+import { localeLangTags, localeOgTags, type Locale } from '../i18n/ui';
 
 interface Props {
   title: string;
@@ -15,6 +16,8 @@ interface Props {
   ogImageAlt?: string;
   robots?: string;
   jsonLd?: object;
+  locale?: Locale;
+  alternates?: { hreflang: string; href: string }[];
 }
 
 const {
@@ -28,6 +31,8 @@ const {
   ogImageAlt = 'Rubens Pessoa — I make apps for iPhone, iPad, and Mac. Independent founder in Graz, Austria.',
   robots = 'index,follow,max-image-preview:large',
   jsonLd,
+  locale = 'en',
+  alternates = [],
 } = Astro.props;
 
 const resolvedOgTitle = ogTitle ?? title;
@@ -35,7 +40,7 @@ const resolvedOgDescription = ogDescription ?? description;
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang={localeLangTags[locale]}>
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -44,7 +49,7 @@ const resolvedOgDescription = ogDescription ?? description;
     <meta name="robots" content={robots}>
     <meta name="theme-color" content="#fcfcfa" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="#131416" media="(prefers-color-scheme: dark)">
-    <meta property="og:locale" content="en_US">
+    <meta property="og:locale" content={localeOgTags[locale]}>
     <meta property="og:site_name" content="Rubens Pessoa">
     <meta property="og:title" content={resolvedOgTitle}>
     <meta property="og:description" content={resolvedOgDescription}>
@@ -60,6 +65,9 @@ const resolvedOgDescription = ogDescription ?? description;
     <meta name="twitter:image" content={ogImage}>
     <meta name="twitter:image:alt" content={ogImageAlt}>
     <link rel="canonical" href={canonicalUrl}>
+    {alternates.map((alt) => (
+      <link rel="alternate" hreflang={alt.hreflang} href={alt.href} />
+    ))}
     <link rel="icon" href="/favicon.ico" sizes="any">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png">
@@ -68,6 +76,12 @@ const resolvedOgDescription = ogDescription ?? description;
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#10161d">
     <link rel="manifest" href="/site.webmanifest">
+    <script is:inline>
+      try {
+        const t = localStorage.getItem('theme');
+        if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t;
+      } catch {}
+    </script>
     <title>{title}</title>
     {jsonLd && (
       <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
@@ -76,11 +90,11 @@ const resolvedOgDescription = ogDescription ?? description;
   <body>
     <SvgSprite />
     <div class="page-shell">
-      <Header />
+      <Header locale={locale} />
       <main>
         <slot />
       </main>
-      <Footer />
+      <Footer locale={locale} />
     </div>
   </body>
 </html>

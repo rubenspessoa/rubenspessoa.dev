@@ -1,12 +1,23 @@
 ---
+import { ui, localePrefixes, type Locale } from '../i18n/ui';
+
+interface Props {
+  locale?: Locale;
+}
+
+const { locale = 'en' } = Astro.props;
+const t = ui[locale];
+const prefix = localePrefixes[locale];
+const home = prefix ? `${prefix}/` : '/';
 const currentPath = Astro.url.pathname;
+const aboutPath = `${prefix}/about/`;
 ---
 
 <header class="site-header">
-  <a class="brand" href="/">Rubens Pessoa</a>
+  <a class="brand" href={home}>Rubens Pessoa</a>
 
   <nav class="site-nav" aria-label="Primary">
-    <a href="/#apps">Apps</a>
-    <a href="/about/" aria-current={currentPath.startsWith('/about') ? 'page' : undefined}>About</a>
+    <a href={`${home}#apps`}>{t.nav.apps}</a>
+    <a href={aboutPath} aria-current={currentPath.startsWith(aboutPath) ? 'page' : undefined}>{t.nav.about}</a>
   </nav>
 </header>

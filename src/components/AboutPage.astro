@@ -1,0 +1,80 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { ui, localePrefixes, type Locale } from '../i18n/ui';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = ui[locale].about;
+const prefix = localePrefixes[locale];
+const canonicalUrl = `https://rubenspessoa.dev${prefix}/about/`;
+
+const alternates = [
+  { hreflang: 'en-GB', href: 'https://rubenspessoa.dev/about/' },
+  { hreflang: 'pt-BR', href: 'https://rubenspessoa.dev/pt-br/about/' },
+  { hreflang: 'de-AT', href: 'https://rubenspessoa.dev/de/about/' },
+  { hreflang: 'x-default', href: 'https://rubenspessoa.dev/about/' },
+];
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "mainEntity": {
+    "@type": "Person",
+    "@id": "https://rubenspessoa.dev/#person",
+    "name": "Rubens Pessoa",
+    "url": "https://rubenspessoa.dev/",
+    "image": "https://rubenspessoa.dev/images/1753387860689.jpeg",
+    "jobTitle": "Founder",
+    "description": "Independent founder building apps for iPhone, iPad, and Mac.",
+    "email": "mailto:contact@rubenspessoa.dev",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Graz",
+      "addressCountry": "AT"
+    },
+    "sameAs": [
+      "https://github.com/rubenspessoa",
+      "https://www.linkedin.com/in/rubenspbf/",
+      "https://x.com/rubenspbf",
+      "https://apps.apple.com/us/developer/rubens-pessoa-de-barros-filho/id1703452695?uo=4"
+    ]
+  }
+};
+---
+
+<BaseLayout
+  title={t.title}
+  description={t.description}
+  canonicalUrl={canonicalUrl}
+  jsonLd={jsonLd}
+  locale={locale}
+  alternates={alternates}
+>
+  <article class="prose-page">
+    <img
+      class="about-portrait"
+      src="/images/1753387860689.jpeg"
+      alt={t.portraitAlt}
+      width="256"
+      height="256"
+      loading="eager"
+      decoding="async"
+    >
+
+    <p class="kicker">{t.kicker}</p>
+    <h1>{t.heading}</h1>
+
+    <div class="prose">
+      <p>{t.p1}</p>
+      <p>{t.p2}</p>
+      <p>{t.p3}</p>
+      <p>
+        {t.contactPrefix}
+        <a href="mailto:contact@rubenspessoa.dev">contact@rubenspessoa.dev</a>.
+      </p>
+    </div>
+  </article>
+</BaseLayout>
