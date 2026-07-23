@@ -44,9 +44,9 @@ export const ui = {
       description:
         'Rubens Pessoa is an independent founder making apps for iPhone, iPad, and Mac: Save My Cactus, Hustlrr, and Giorni.',
       ogDescription: 'Independent founder making apps for Apple devices.',
-      heroTitle: 'I make apps for iPhone, iPad, and Mac.',
+      heroTitle: 'I make apps for iPhone, iPad, Mac, and Apple Watch.',
       heroLede:
-        'I’m an independent founder in Graz, Austria. Every app here is built and looked after by me alone, and I like to keep them small.',
+        'I’m an independent founder in Graz, Austria. Every app here is native, built by me alone, and looked after for the long run.',
       appsLabel: 'Apps',
       comingSoon: 'Coming soon',
       learnMore: 'Learn more',
@@ -79,11 +79,11 @@ export const ui = {
     about: {
       title: 'About | Rubens Pessoa',
       description:
-        'Rubens Pessoa is an independent founder in Graz, Austria, making apps for iPhone, iPad, and Mac.',
+        'Rubens Pessoa is an independent founder in Graz, Austria, making apps for iPhone, iPad, Mac, and Apple Watch.',
       kicker: 'About',
       heading: 'Hi, I’m Rubens.',
-      p1: 'I’m a Brazilian founder living in Graz, Austria. I make apps for iPhone, iPad, and Mac, and I do everything myself: the design, the code, and the support inbox.',
-      p2: 'I keep the apps small on purpose. Each one does a single job, and I’d rather ship something narrow that works than something broad that sort of does. Working alone also means there’s nobody else to blame when a detail is off, which turns out to be excellent motivation for getting the details right.',
+      p1: 'I’m a Brazilian founder living in Graz, Austria. I make apps for iPhone, iPad, Mac, and Apple Watch, and I do everything myself: the design, the code, and the support inbox.',
+      p2: 'Everything I ship is native, and I sweat the details: how an app feels on the platform it lives on, how it behaves offline, and what happens to your data — the short version is that it stays yours. Working alone also means there’s nobody else to blame when a detail is off, which turns out to be excellent motivation for getting the details right.',
       p3: 'Outside of work I’m usually on a bike, on skis I’m still learning to trust, or playing the guitar I never quite put down after years in a band. I’m married to a brilliant engineer, so home is basically a happy nerdy two-person lab.',
       contactPrefix: 'Questions about the apps, or just want to say hi? Write me at',
       portraitAlt: 'Portrait of Rubens Pessoa',
@@ -102,11 +102,11 @@ export const ui = {
     home: {
       title: 'Rubens Pessoa — Apps para iPhone, iPad e Mac',
       description:
-        'Rubens Pessoa é um fundador independente que faz apps para iPhone, iPad e Mac: Save My Cactus, Hustlrr e Giorni.',
-      ogDescription: 'Fundador independente fazendo apps para dispositivos Apple.',
-      heroTitle: 'Eu faço apps para iPhone, iPad e Mac.',
+        'Rubens Pessoa cria e mantém sozinho apps para iPhone, iPad e Mac: Save My Cactus, Hustlrr e Giorni.',
+      ogDescription: 'Apps para dispositivos Apple, criados e cuidados por uma pessoa só.',
+      heroTitle: 'Eu faço apps para iPhone, iPad, Mac e Apple Watch.',
       heroLede:
-        'Sou um fundador independente em Graz, na Áustria. Cada app daqui é feito e cuidado só por mim, e gosto de mantê-los pequenos.',
+        'Moro em Graz, na Áustria, e crio meus próprios apps. Cada um daqui é nativo, feito do começo ao fim só por mim e cuidado para durar.',
       appsLabel: 'Apps',
       comingSoon: 'Em breve',
       learnMore: 'Saiba mais',
@@ -139,11 +139,11 @@ export const ui = {
     about: {
       title: 'Sobre | Rubens Pessoa',
       description:
-        'Rubens Pessoa é um fundador independente em Graz, na Áustria, fazendo apps para iPhone, iPad e Mac.',
+        'Rubens Pessoa mora em Graz, na Áustria, e cria seus próprios apps para iPhone, iPad, Mac e Apple Watch.',
       kicker: 'Sobre',
       heading: 'Oi, eu sou o Rubens.',
-      p1: 'Sou um fundador brasileiro morando em Graz, na Áustria. Faço apps para iPhone, iPad e Mac, e faço tudo sozinho: o design, o código e a caixa de entrada do suporte.',
-      p2: 'Mantenho os apps pequenos de propósito. Cada um faz uma única coisa, e prefiro lançar algo enxuto que funciona a algo amplo que meio que funciona. Trabalhar sozinho também significa que não tem mais ninguém para culpar quando um detalhe sai errado, o que acaba sendo uma ótima motivação para acertar os detalhes.',
+      p1: 'Sou brasileiro, moro em Graz, na Áustria, e crio meus próprios apps para iPhone, iPad, Mac e Apple Watch. Faço tudo sozinho: o design, o código e a caixa de entrada do suporte.',
+      p2: 'Tudo o que eu lanço é nativo, e me importo com os detalhes: como o app se sente na plataforma em que vive, como se comporta offline e o que acontece com os seus dados — a versão curta é que eles continuam seus. Trabalhar sozinho também significa que não tem mais ninguém para culpar quando um detalhe sai errado, o que acaba sendo uma ótima motivação para acertar os detalhes.',
       p3: 'Fora do trabalho, geralmente estou na bicicleta, nos esquis em que ainda estou aprendendo a confiar, ou tocando a guitarra que nunca larguei desde os tempos de banda. Sou casado com uma engenheira brilhante, então nossa casa é basicamente um laboratório nerd feliz de duas pessoas.',
       contactPrefix: 'Dúvidas sobre os apps, ou só quer dizer um oi? Me escreva em',
       portraitAlt: 'Retrato de Rubens Pessoa',
@@ -162,11 +162,11 @@ export const ui = {
     home: {
       title: 'Rubens Pessoa — Apps für iPhone, iPad und Mac',
       description:
-        'Rubens Pessoa ist ein unabhängiger Gründer und macht Apps für iPhone, iPad und Mac: Save My Cactus, Hustlrr und Giorni.',
-      ogDescription: 'Unabhängiger Gründer, der Apps für Apple-Geräte macht.',
-      heroTitle: 'Ich mache Apps für iPhone, iPad und Mac.',
+        'Rubens Pessoa baut und pflegt im Alleingang Apps für iPhone, iPad und Mac: Save My Cactus, Hustlrr und Giorni.',
+      ogDescription: 'Eigene Apps für Apple-Geräte, allein gebaut und langfristig gepflegt.',
+      heroTitle: 'Ich mache Apps für iPhone, iPad, Mac und Apple Watch.',
       heroLede:
-        'Ich bin unabhängiger Gründer in Graz. Jede App hier baue und betreue ich allein, und ich halte sie bewusst klein.',
+        'Ich lebe in Graz und baue meine eigenen Apps. Jede hier ist nativ, komplett von mir allein und auf lange Sicht gepflegt.',
       appsLabel: 'Apps',
       comingSoon: 'Demnächst',
       learnMore: 'Mehr erfahren',
@@ -199,11 +199,11 @@ export const ui = {
     about: {
       title: 'Über mich | Rubens Pessoa',
       description:
-        'Rubens Pessoa ist ein unabhängiger Gründer in Graz und macht Apps für iPhone, iPad und Mac.',
+        'Rubens Pessoa lebt in Graz und baut seine eigenen Apps für iPhone, iPad, Mac und Apple Watch.',
       kicker: 'Über mich',
       heading: 'Hallo, ich bin Rubens.',
-      p1: 'Ich bin ein brasilianischer Gründer und lebe in Graz. Ich mache Apps für iPhone, iPad und Mac, und zwar alles selbst: das Design, den Code und das Support-Postfach.',
-      p2: 'Ich halte meine Apps bewusst klein. Jede macht genau eine Sache, und mir ist etwas Schmales, das funktioniert, lieber als etwas Breites, das nur so halb funktioniert. Allein zu arbeiten heißt auch: Wenn ein Detail nicht passt, ist niemand sonst schuld. Das ist erstaunlich gute Motivation, die Details richtig hinzubekommen.',
+      p1: 'Ich bin Brasilianer, lebe in Graz und baue meine eigenen Apps für iPhone, iPad, Mac und Apple Watch – alles selbst: das Design, den Code und das Support-Postfach.',
+      p2: 'Alles, was ich veröffentliche, ist nativ, und ich achte auf die Details: wie sich eine App auf ihrer Plattform anfühlt, wie sie offline funktioniert und was mit deinen Daten passiert — kurz gesagt: sie bleiben deine. Allein zu arbeiten heißt auch: Wenn ein Detail nicht passt, ist niemand sonst schuld. Das ist erstaunlich gute Motivation, die Details richtig hinzubekommen.',
       p3: 'Abseits der Arbeit bin ich meistens am Rad, auf Skiern, denen ich noch nicht ganz traue, oder an der Gitarre, die ich seit meinen Bandjahren nie ganz weggelegt habe. Ich bin mit einer großartigen Ingenieurin verheiratet, unser Zuhause ist also im Grunde ein glückliches Nerd-Labor für zwei.',
       contactPrefix: 'Fragen zu den Apps, oder einfach Hallo sagen? Schreib mir an',
       portraitAlt: 'Porträt von Rubens Pessoa',
