@@ -38,6 +38,7 @@ export const ui = {
       builtIn: 'Built in Graz, Austria.',
       themeLabels: { auto: 'Auto', light: 'Light', dark: 'Dark' },
       themeName: 'Theme',
+      language: 'Language',
     },
     home: {
       title: 'Rubens Pessoa — Apps for iPhone, iPad, and Mac',
@@ -98,6 +99,7 @@ export const ui = {
       builtIn: 'Feito em Graz, Áustria.',
       themeLabels: { auto: 'Automático', light: 'Claro', dark: 'Escuro' },
       themeName: 'Tema',
+      language: 'Idioma',
     },
     home: {
       title: 'Rubens Pessoa — Apps para iPhone, iPad e Mac',
@@ -158,6 +160,7 @@ export const ui = {
       builtIn: 'Gemacht in Graz, Österreich.',
       themeLabels: { auto: 'Automatisch', light: 'Hell', dark: 'Dunkel' },
       themeName: 'Design',
+      language: 'Sprache',
     },
     home: {
       title: 'Rubens Pessoa — Apps für iPhone, iPad und Mac',

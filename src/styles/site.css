@@ -469,28 +469,122 @@ main {
 }
 
 .footer-link svg {
-  width: 1em;
-  height: 1em;
+  width: 1.3em;
+  height: 1.3em;
 }
 
-.lang-switch a[aria-current="true"] {
+.footer-controls {
+  gap: 1.5rem;
+}
+
+.lang-menu {
+  position: relative;
+}
+
+.lang-menu summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  cursor: pointer;
+  list-style: none;
+  color: var(--ink-muted);
+  transition: color 150ms ease-out;
+}
+
+.lang-menu summary::-webkit-details-marker {
+  display: none;
+}
+
+.lang-menu summary:hover,
+.lang-menu[open] summary {
+  color: var(--ink);
+}
+
+.lang-menu summary svg {
+  width: 1.3em;
+  height: 1.3em;
+}
+
+.lang-menu summary .lang-menu__chevron {
+  width: 0.7em;
+  height: 0.7em;
+  transition: transform 150ms ease-out;
+}
+
+.lang-menu[open] .lang-menu__chevron {
+  transform: rotate(180deg);
+}
+
+.lang-menu__list {
+  position: absolute;
+  bottom: calc(100% + 0.6rem);
+  left: -0.45rem;
+  z-index: 10;
+  min-width: 9rem;
+  margin: 0;
+  padding: 0.35rem;
+  list-style: none;
+  display: grid;
+  gap: 2px;
+  background: var(--card);
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+}
+
+.lang-menu__list a {
+  display: block;
+  padding: 0.4rem 0.65rem;
+  border-radius: calc(var(--radius) - 6px);
+  color: var(--ink-muted);
+}
+
+.lang-menu__list a:hover {
+  color: var(--ink);
+  background: var(--line-soft);
+}
+
+.lang-menu__list a[aria-current="true"] {
   color: var(--ink);
   font-weight: 550;
 }
 
-.theme-toggle {
-  border: none;
-  background: none;
-  padding: 0;
-  margin: 0;
-  font: inherit;
-  color: var(--ink-muted);
-  cursor: pointer;
-  transition: color 150ms ease-out;
+.theme-group {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
 }
 
-.theme-toggle:hover {
+.theme-group button {
+  border: none;
+  background: none;
+  margin: 0;
+  padding: 0.32rem;
+  font: inherit;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  color: var(--ink-muted);
+  cursor: pointer;
+  transition:
+    color 150ms ease-out,
+    background-color 150ms ease-out;
+}
+
+.theme-group button:hover {
   color: var(--ink);
+}
+
+.theme-group button[aria-checked="true"] {
+  color: var(--ink);
+  background: var(--line-soft);
+}
+
+.theme-group button svg {
+  display: block;
+  width: 1.15em;
+  height: 1.15em;
 }
 
 /* ===== Small screens ===== */
