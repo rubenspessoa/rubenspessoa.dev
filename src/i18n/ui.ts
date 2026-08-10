@@ -71,6 +71,7 @@ export const ui = {
         jsonDescription: 'A daily habit tracker with focus sessions and iCloud sync.',
         storeAria: 'Download Giorni on the App Store',
       },
+      provenanceFlagAlt: 'European Union',
       provenance: 'Made in Europe. Built under European privacy law, with no trackers and no data resale.',
     },
     about: {
@@ -139,6 +140,7 @@ export const ui = {
         jsonDescription: 'Um rastreador de hábitos diários com sessões de foco e sincronização via iCloud.',
         storeAria: 'Baixar o Giorni na App Store',
       },
+      provenanceFlagAlt: 'União Europeia',
       provenance: 'Feito na Europa. Criado sob as leis europeias de privacidade, sem rastreadores e sem venda de dados.',
     },
     about: {
@@ -207,6 +209,7 @@ export const ui = {
         jsonDescription: 'Ein täglicher Habit-Tracker mit Fokus-Sessions und iCloud-Sync.',
         storeAria: 'Giorni im App Store laden',
       },
+      provenanceFlagAlt: 'Europäische Union',
       provenance: 'Made in Europe. Gebaut unter europäischem Datenschutzrecht, ohne Tracker und ohne Datenverkauf.',
     },
     about: {

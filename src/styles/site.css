@@ -393,8 +393,6 @@ main {
   transform: translate(1px, -1px);
 }
 
-/* ===== Also built ===== */
-
 /* ===== Prose pages (about, imprint, legal) ===== */
 
 .prose-page {
@@ -551,7 +549,8 @@ main {
   gap: 1.25rem;
 }
 
-.footer-brand {
+/* Scoped to beat `.site-footer a`, which sets color: inherit below */
+.site-footer .footer-brand {
   color: var(--ink);
 }
 
