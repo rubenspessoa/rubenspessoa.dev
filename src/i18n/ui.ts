@@ -41,14 +41,14 @@ export const ui = {
       language: 'Language',
     },
     home: {
-      title: 'Rubens Pessoa — Apps for iPhone, iPad, and Mac',
+      title: 'Rogue Pixel | Apps for iPhone, iPad, and Mac by Rubens Pessoa',
       description:
-        'Rubens Pessoa is an independent founder making apps for iPhone, iPad, and Mac: Save My Cactus, Hustlrr, and Giorni.',
-      ogDescription: 'Independent founder making apps for Apple devices.',
-      heroTitle: 'I make apps for iPhone, iPad, Mac, and Apple Watch.',
+        'Rogue Pixel is the app studio of Rubens Pessoa. Native apps for iPhone, iPad, and Mac: Save My Cactus, Hustlrr, and Giorni.',
+      ogDescription: 'Native apps for Apple devices from Rogue Pixel, the one-person studio of Rubens Pessoa.',
+      heroTitle: 'Apps for iPhone, iPad, Mac, and Apple Watch.',
       heroLede:
-        'I’m an independent founder in Graz, Austria. Every app here is native, built by me alone, and looked after for the long run.',
-      appsLabel: 'Apps',
+        'Rogue Pixel is the one-person app studio of Rubens Pessoa in Graz, Austria. Every app is native, and the person who built it also answers the support email.',
+      appsLabel: 'Apps by Rogue Pixel',
       comingSoon: 'Coming soon',
       learnMore: 'Learn more',
       smc: {
@@ -71,21 +71,29 @@ export const ui = {
         jsonDescription: 'A daily habit tracker with focus sessions and iCloud sync.',
         storeAria: 'Download Giorni on the App Store',
       },
-      alsoMade: {
-        prefix: 'Also made:',
-        appelou: 'a price-comparison app for Alagoas, Brazil',
-        nitpickr: 'an AI code-review tool for GitHub',
-      },
+      provenanceFlagAlt: 'European Union',
+      provenance: 'Made in Europe. Built under European privacy law, with no trackers and no data resale.',
     },
     about: {
-      title: 'About | Rubens Pessoa',
+      title: 'About | Rogue Pixel',
       description:
         'Rubens Pessoa is an independent founder in Graz, Austria, making apps for iPhone, iPad, Mac, and Apple Watch.',
       kicker: 'About',
       heading: 'Hi, I’m Rubens.',
-      p1: 'I’m a Brazilian founder living in Graz, Austria. I make apps for iPhone, iPad, Mac, and Apple Watch, and I do everything myself: the design, the code, and the support inbox.',
-      p2: 'Everything I ship is native, and I sweat the details: how an app feels on the platform it lives on, how it behaves offline, and what happens to your data — the short version is that it stays yours. Working alone also means there’s nobody else to blame when a detail is off, which turns out to be excellent motivation for getting the details right.',
+      p1: 'I’m a Brazilian founder living in Graz, Austria. I make apps for iPhone, iPad, Mac, and Apple Watch, and I do everything myself: the design, the code, and the support inbox. Rogue Pixel is the name I put on all of it.',
+      p2: 'Everything I ship is native, and I sweat the details: how an app feels on the platform it lives on, how it behaves offline, and what happens to your data. The short version is that it stays yours. Working alone also means there’s nobody else to blame when a detail is off, which turns out to be excellent motivation for getting the details right.',
       p3: 'Outside of work I’m usually on a bike, on skis I’m still learning to trust, or playing the guitar I never quite put down after years in a band. I’m married to a brilliant engineer, so home is basically a happy nerdy two-person lab.',
+      grazHeading: 'Made in Graz.',
+      grazText1:
+        'Graz has been home for seven years now. I ride my bicycle basically everywhere, because here you can. Sundays are properly quiet: shops closed, streets slow, and I’ve grown to love that pace. For a city this size there is a stubborn amount of culture, from opera to street festivals, and it rubs off on you. I think you can see it in the apps. Quiet, unhurried software, made a short walk from the places in these photos.',
+      grazText2:
+        'And I’m not from here. I came from Brazil, chose this place, and I care about it the way you care about things you chose. Rogue Pixel is a small way of giving something back to the city and the continent that became home.',
+      closing: 'If one of these apps ends up on your phone, now you know who made it and where.',
+      grazAlts: {
+        uhrturm: 'The Uhrturm clock tower on the Schlossberg, seen from the square below',
+        murinsel: 'The Murinsel floating platform on the Mur river at dusk',
+        hauptplatz: 'The Hauptplatz in Graz on a wet evening, with the lit kiosk in the middle of the square',
+      },
       contactPrefix: 'Questions about the apps, or just want to say hi? Write me at',
       portraitAlt: 'Portrait of Rubens Pessoa',
     },
@@ -102,14 +110,14 @@ export const ui = {
       language: 'Idioma',
     },
     home: {
-      title: 'Rubens Pessoa — Apps para iPhone, iPad e Mac',
+      title: 'Rogue Pixel | Apps para iPhone, iPad e Mac por Rubens Pessoa',
       description:
-        'Rubens Pessoa cria e mantém sozinho apps para iPhone, iPad e Mac: Save My Cactus, Hustlrr e Giorni.',
-      ogDescription: 'Apps para dispositivos Apple, criados e cuidados por uma pessoa só.',
-      heroTitle: 'Eu faço apps para iPhone, iPad, Mac e Apple Watch.',
+        'A Rogue Pixel é o estúdio de apps de Rubens Pessoa. Apps nativos para iPhone, iPad e Mac: Save My Cactus, Hustlrr e Giorni.',
+      ogDescription: 'Apps nativos para dispositivos Apple da Rogue Pixel, o estúdio de uma pessoa só de Rubens Pessoa.',
+      heroTitle: 'Apps para iPhone, iPad, Mac e Apple Watch.',
       heroLede:
-        'Moro em Graz, na Áustria, e crio meus próprios apps. Cada um daqui é nativo, feito do começo ao fim só por mim e cuidado para durar.',
-      appsLabel: 'Apps',
+        'A Rogue Pixel é o estúdio de apps de uma pessoa só: o de Rubens Pessoa, em Graz, na Áustria. Cada app é nativo, e quem escreveu o código é quem responde o e-mail de suporte.',
+      appsLabel: 'Apps da Rogue Pixel',
       comingSoon: 'Em breve',
       learnMore: 'Saiba mais',
       smc: {
@@ -132,21 +140,29 @@ export const ui = {
         jsonDescription: 'Um rastreador de hábitos diários com sessões de foco e sincronização via iCloud.',
         storeAria: 'Baixar o Giorni na App Store',
       },
-      alsoMade: {
-        prefix: 'Também fiz:',
-        appelou: 'um comparador de preços para Alagoas',
-        nitpickr: 'uma ferramenta de revisão de código com IA para o GitHub',
-      },
+      provenanceFlagAlt: 'União Europeia',
+      provenance: 'Feito na Europa. Criado sob as leis europeias de privacidade, sem rastreadores e sem venda de dados.',
     },
     about: {
-      title: 'Sobre | Rubens Pessoa',
+      title: 'Sobre | Rogue Pixel',
       description:
         'Rubens Pessoa mora em Graz, na Áustria, e cria seus próprios apps para iPhone, iPad, Mac e Apple Watch.',
       kicker: 'Sobre',
       heading: 'Oi, eu sou o Rubens.',
-      p1: 'Sou brasileiro, moro em Graz, na Áustria, e crio meus próprios apps para iPhone, iPad, Mac e Apple Watch. Faço tudo sozinho: o design, o código e a caixa de entrada do suporte.',
-      p2: 'Tudo o que eu lanço é nativo, e me importo com os detalhes: como o app se sente na plataforma em que vive, como se comporta offline e o que acontece com os seus dados — a versão curta é que eles continuam seus. Trabalhar sozinho também significa que não tem mais ninguém para culpar quando um detalhe sai errado, o que acaba sendo uma ótima motivação para acertar os detalhes.',
+      p1: 'Sou brasileiro, moro em Graz, na Áustria, e crio meus próprios apps para iPhone, iPad, Mac e Apple Watch. Faço tudo sozinho: o design, o código e a caixa de entrada do suporte. A Rogue Pixel é o nome que eu coloco em tudo isso.',
+      p2: 'Tudo o que eu lanço é nativo, e me importo com os detalhes: como o app se sente na plataforma em que vive, como se comporta offline e o que acontece com os seus dados. A versão curta é que eles continuam seus. Trabalhar sozinho também significa que não tem mais ninguém para culpar quando um detalhe sai errado, o que acaba sendo uma ótima motivação para acertar os detalhes.',
       p3: 'Fora do trabalho, geralmente estou na bicicleta, nos esquis em que ainda estou aprendendo a confiar, ou tocando a guitarra que nunca larguei desde os tempos de banda. Sou casado com uma engenheira brilhante, então nossa casa é basicamente um laboratório nerd feliz de duas pessoas.',
+      grazHeading: 'Feito em Graz.',
+      grazText1:
+        'Graz é a minha casa há sete anos. Ando de bicicleta para praticamente tudo, porque aqui dá. Os domingos são silenciosos de verdade: lojas fechadas, ruas lentas, e aprendi a gostar desse ritmo. Para uma cidade desse tamanho, tem uma quantidade teimosa de cultura, da ópera aos festivais de rua, e isso contagia. Acho que dá para ver isso nos apps. Software calmo, sem pressa, feito a poucos passos dos lugares dessas fotos.',
+      grazText2:
+        'E eu não sou daqui. Vim do Brasil, escolhi este lugar, e me importo com ele do jeito que a gente se importa com o que escolheu. A Rogue Pixel é um jeito pequeno de retribuir à cidade e ao continente que viraram casa.',
+      closing: 'Se um desses apps acabar no seu celular, agora você sabe quem fez e onde.',
+      grazAlts: {
+        uhrturm: 'A torre do relógio Uhrturm no Schlossberg, vista da praça abaixo',
+        murinsel: 'A plataforma flutuante Murinsel no rio Mur ao anoitecer',
+        hauptplatz: 'A Hauptplatz de Graz numa noite chuvosa, com o quiosque iluminado no meio da praça',
+      },
       contactPrefix: 'Dúvidas sobre os apps, ou só quer dizer um oi? Me escreva em',
       portraitAlt: 'Retrato de Rubens Pessoa',
     },
@@ -163,14 +179,14 @@ export const ui = {
       language: 'Sprache',
     },
     home: {
-      title: 'Rubens Pessoa — Apps für iPhone, iPad und Mac',
+      title: 'Rogue Pixel | Apps für iPhone, iPad und Mac von Rubens Pessoa',
       description:
-        'Rubens Pessoa baut und pflegt im Alleingang Apps für iPhone, iPad und Mac: Save My Cactus, Hustlrr und Giorni.',
-      ogDescription: 'Eigene Apps für Apple-Geräte, allein gebaut und langfristig gepflegt.',
-      heroTitle: 'Ich mache Apps für iPhone, iPad, Mac und Apple Watch.',
+        'Rogue Pixel ist das App-Studio von Rubens Pessoa. Native Apps für iPhone, iPad und Mac: Save My Cactus, Hustlrr und Giorni.',
+      ogDescription: 'Native Apps für Apple-Geräte von Rogue Pixel, dem Ein-Personen-Studio von Rubens Pessoa.',
+      heroTitle: 'Apps für iPhone, iPad, Mac und Apple Watch.',
       heroLede:
-        'Ich lebe in Graz und baue meine eigenen Apps. Jede hier ist nativ, komplett von mir allein und auf lange Sicht gepflegt.',
-      appsLabel: 'Apps',
+        'Rogue Pixel ist das Ein-Personen-App-Studio von Rubens Pessoa in Graz. Jede App ist nativ, und wer sie gebaut hat, beantwortet auch die Support-Mails.',
+      appsLabel: 'Apps von Rogue Pixel',
       comingSoon: 'Demnächst',
       learnMore: 'Mehr erfahren',
       smc: {
@@ -193,21 +209,29 @@ export const ui = {
         jsonDescription: 'Ein täglicher Habit-Tracker mit Fokus-Sessions und iCloud-Sync.',
         storeAria: 'Giorni im App Store laden',
       },
-      alsoMade: {
-        prefix: 'Außerdem gebaut:',
-        appelou: 'eine Preisvergleichs-App für Alagoas, Brasilien',
-        nitpickr: 'ein KI-Code-Review-Tool für GitHub',
-      },
+      provenanceFlagAlt: 'Europäische Union',
+      provenance: 'Made in Europe. Gebaut unter europäischem Datenschutzrecht, ohne Tracker und ohne Datenverkauf.',
     },
     about: {
-      title: 'Über mich | Rubens Pessoa',
+      title: 'Über mich | Rogue Pixel',
       description:
         'Rubens Pessoa lebt in Graz und baut seine eigenen Apps für iPhone, iPad, Mac und Apple Watch.',
       kicker: 'Über mich',
       heading: 'Hallo, ich bin Rubens.',
-      p1: 'Ich bin Brasilianer, lebe in Graz und baue meine eigenen Apps für iPhone, iPad, Mac und Apple Watch – alles selbst: das Design, den Code und das Support-Postfach.',
-      p2: 'Alles, was ich veröffentliche, ist nativ, und ich achte auf die Details: wie sich eine App auf ihrer Plattform anfühlt, wie sie offline funktioniert und was mit deinen Daten passiert — kurz gesagt: sie bleiben deine. Allein zu arbeiten heißt auch: Wenn ein Detail nicht passt, ist niemand sonst schuld. Das ist erstaunlich gute Motivation, die Details richtig hinzubekommen.',
+      p1: 'Ich bin Brasilianer, lebe in Graz und baue meine eigenen Apps für iPhone, iPad, Mac und Apple Watch. Alles selbst: das Design, den Code und das Support-Postfach. Rogue Pixel ist der Name, den ich draufschreibe.',
+      p2: 'Alles, was ich veröffentliche, ist nativ, und ich achte auf die Details: wie sich eine App auf ihrer Plattform anfühlt, wie sie offline funktioniert und was mit deinen Daten passiert. Kurz gesagt: Sie bleiben deine. Allein zu arbeiten heißt auch: Wenn ein Detail nicht passt, ist niemand sonst schuld. Das ist erstaunlich gute Motivation, die Details richtig hinzubekommen.',
       p3: 'Abseits der Arbeit bin ich meistens am Rad, auf Skiern, denen ich noch nicht ganz traue, oder an der Gitarre, die ich seit meinen Bandjahren nie ganz weggelegt habe. Ich bin mit einer großartigen Ingenieurin verheiratet, unser Zuhause ist also im Grunde ein glückliches Nerd-Labor für zwei.',
+      grazHeading: 'Gemacht in Graz.',
+      grazText1:
+        'Graz ist seit sieben Jahren mein Zuhause. Ich fahre praktisch überallhin mit dem Rad, weil das hier einfach geht. Sonntage sind hier wirklich still: Geschäfte zu, Straßen langsam, und ich habe diesen Rhythmus lieben gelernt. Für eine Stadt dieser Größe gibt es erstaunlich viel Kultur, von der Oper bis zu Straßenfestivals, und das färbt ab. Ich glaube, man sieht das den Apps an. Ruhige Software ohne Eile, entstanden ein paar Gehminuten von den Orten auf diesen Fotos.',
+      grazText2:
+        'Und ich bin nicht von hier. Ich kam aus Brasilien, habe mir diesen Ort ausgesucht, und er liegt mir so am Herzen, wie einem Dinge am Herzen liegen, die man selbst gewählt hat. Rogue Pixel ist mein kleiner Beitrag an die Stadt und den Kontinent, die mein Zuhause geworden sind.',
+      closing: 'Wenn eine dieser Apps auf deinem Handy landet, weißt du jetzt, wer sie gemacht hat und wo.',
+      grazAlts: {
+        uhrturm: 'Der Uhrturm am Schlossberg, vom Platz darunter gesehen',
+        murinsel: 'Die Murinsel in der Mur in der Abenddämmerung',
+        hauptplatz: 'Der Grazer Hauptplatz an einem regnerischen Abend, mit dem beleuchteten Würstelstand',
+      },
       contactPrefix: 'Fragen zu den Apps, oder einfach Hallo sagen? Schreib mir an',
       portraitAlt: 'Porträt von Rubens Pessoa',
     },

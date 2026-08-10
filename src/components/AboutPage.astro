@@ -30,6 +30,11 @@ const jsonLd = {
     "jobTitle": "Founder",
     "description": "Independent founder building apps for iPhone, iPad, and Mac.",
     "email": "mailto:contact@rubenspessoa.dev",
+    "worksFor": {
+      "@type": "Organization",
+      "@id": "https://rubenspessoa.dev/#roguepixel",
+      "name": "Rogue Pixel"
+    },
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Graz",
@@ -73,6 +78,49 @@ const jsonLd = {
       <p>{t.p1}</p>
       <p>{t.p2}</p>
       <p>{t.p3}</p>
+
+      <section class="graz">
+        <h2>{t.grazHeading}</h2>
+        <p>{t.grazText1}</p>
+        <p>{t.grazText2}</p>
+        <div class="graz__grid">
+          <img
+            class="graz__photo graz__photo--tall"
+            src="/images/graz/uhrturm-800.webp"
+            srcset="/images/graz/uhrturm-800.webp 800w, /images/graz/uhrturm-1600.webp 1600w"
+            sizes="(max-width: 640px) 100vw, 400px"
+            alt={t.grazAlts.uhrturm}
+            width="800"
+            height="1200"
+            loading="lazy"
+            decoding="async"
+          >
+          <img
+            class="graz__photo"
+            src="/images/graz/murinsel-800.webp"
+            srcset="/images/graz/murinsel-800.webp 800w, /images/graz/murinsel-1600.webp 1600w"
+            sizes="(max-width: 640px) 100vw, 400px"
+            alt={t.grazAlts.murinsel}
+            width="800"
+            height="536"
+            loading="lazy"
+            decoding="async"
+          >
+          <img
+            class="graz__photo"
+            src="/images/graz/hauptplatz-800.webp"
+            srcset="/images/graz/hauptplatz-800.webp 800w, /images/graz/hauptplatz-1600.webp 1600w"
+            sizes="(max-width: 640px) 100vw, 400px"
+            alt={t.grazAlts.hauptplatz}
+            width="800"
+            height="536"
+            loading="lazy"
+            decoding="async"
+          >
+        </div>
+      </section>
+
+      <p>{t.closing}</p>
       <p>
         {t.contactPrefix} <a href="mailto:contact@rubenspessoa.dev">contact@rubenspessoa.dev</a>.
       </p>
