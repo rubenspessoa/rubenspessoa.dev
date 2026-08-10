@@ -156,15 +156,20 @@ main {
   margin: 0 auto;
   padding: 2rem 0;
   display: flex;
-  align-items: baseline;
+  align-items: center;
   justify-content: space-between;
   gap: 1rem;
 }
 
 .brand {
-  font-weight: 650;
+  display: inline-flex;
   text-decoration: none;
-  letter-spacing: -0.01em;
+}
+
+.brand__logo {
+  display: block;
+  height: 2.4rem;
+  width: auto;
 }
 
 .site-nav {
@@ -437,12 +442,28 @@ main {
   padding: 3rem 0 3.5rem;
   border-top: 1px solid var(--line-soft);
   display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  font-size: 0.95rem;
+  color: var(--ink-muted);
+}
+
+.footer-row {
+  display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   gap: 1.25rem;
-  font-size: 0.95rem;
-  color: var(--ink-muted);
+}
+
+.footer-brand {
+  color: var(--ink);
+}
+
+.footer-brand__logo {
+  display: block;
+  height: 2.5rem;
+  width: auto;
 }
 
 .site-footer a {
@@ -460,6 +481,12 @@ main {
   flex-wrap: wrap;
   align-items: center;
   gap: 1.25rem;
+}
+
+.footer-identity {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--ink-muted);
 }
 
 .footer-link {
@@ -594,7 +621,7 @@ main {
     padding: 3.5rem 0 3rem;
   }
 
-  .site-footer {
+  .footer-row {
     flex-direction: column;
     align-items: flex-start;
   }

@@ -52,14 +52,28 @@ const jsonLd = {
       ]
     },
     {
+      "@type": "Organization",
+      "@id": "https://rubenspessoa.dev/#roguepixel",
+      "name": "Rogue Pixel",
+      "description": "One-person app studio of Rubens Pessoa.",
+      "url": "https://rubenspessoa.dev/",
+      "logo": "https://rubenspessoa.dev/android-chrome-512x512.png",
+      "founder": { "@id": "https://rubenspessoa.dev/#person" },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Graz",
+        "addressCountry": "AT"
+      }
+    },
+    {
       "@type": "WebSite",
       "@id": "https://rubenspessoa.dev/#website",
       "url": "https://rubenspessoa.dev/",
-      "name": "Rubens Pessoa",
+      "name": "Rogue Pixel",
       "inLanguage": localeLangTags[locale],
       "description": t.ogDescription,
       "publisher": {
-        "@id": "https://rubenspessoa.dev/#person"
+        "@id": "https://rubenspessoa.dev/#roguepixel"
       }
     },
     {
@@ -70,7 +84,8 @@ const jsonLd = {
       "description": t.smc.jsonDescription,
       "url": "https://savemycactus.rubenspessoa.dev/",
       "image": "https://rubenspessoa.dev/images/apps/save-my-cactus-icon.png",
-      "author": { "@id": "https://rubenspessoa.dev/#person" }
+      "author": { "@id": "https://rubenspessoa.dev/#person" },
+      "publisher": { "@id": "https://rubenspessoa.dev/#roguepixel" }
     },
     {
       "@type": "SoftwareApplication",
@@ -81,7 +96,8 @@ const jsonLd = {
       "url": "https://apps.apple.com/us/app/hustlrr-question-ai-chat/id6737912223",
       "image": "https://rubenspessoa.dev/images/apps/hustlrr-icon.jpg",
       "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-      "author": { "@id": "https://rubenspessoa.dev/#person" }
+      "author": { "@id": "https://rubenspessoa.dev/#person" },
+      "publisher": { "@id": "https://rubenspessoa.dev/#roguepixel" }
     },
     {
       "@type": "SoftwareApplication",
@@ -92,7 +108,8 @@ const jsonLd = {
       "url": "https://apps.apple.com/us/app/daily-habit-tracker-giorni/id6505112435",
       "image": "https://rubenspessoa.dev/images/apps/giorni-icon.jpg",
       "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-      "author": { "@id": "https://rubenspessoa.dev/#person" }
+      "author": { "@id": "https://rubenspessoa.dev/#person" },
+      "publisher": { "@id": "https://rubenspessoa.dev/#roguepixel" }
     }
   ]
 };
