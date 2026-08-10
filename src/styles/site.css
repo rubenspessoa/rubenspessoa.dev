@@ -20,7 +20,8 @@
     0 1px 2px light-dark(rgba(17, 18, 20, 0.03), rgba(0, 0, 0, 0.2)),
     0 12px 32px light-dark(rgba(17, 18, 20, 0.04), rgba(0, 0, 0, 0));
   --icon-ring: light-dark(rgba(0, 0, 0, 0.06), rgba(255, 255, 255, 0.08));
-  --grain-opacity: 0.11;
+  --grain-opacity: 0.22;
+  --wash-accent-mix: 9%;
   --radius: 12px;
   --radius-lg: 20px;
   --measure: 42rem;
@@ -41,15 +42,18 @@
   color-scheme: dark;
 }
 
-/* Grain opacity is a number, not a color, so it needs explicit dark rules */
+/* Grain opacity and wash strength are numbers, not colors, so they need
+   explicit dark rules (the accent glow needs more presence on near-black) */
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --grain-opacity: 0.1;
+    --grain-opacity: 0.16;
+    --wash-accent-mix: 13%;
   }
 }
 
 :root[data-theme="dark"] {
-  --grain-opacity: 0.1;
+  --grain-opacity: 0.16;
+  --wash-accent-mix: 13%;
 }
 
 /* ===== Reset ===== */
@@ -71,7 +75,12 @@ body {
   font-size: 1.0625rem;
   line-height: 1.65;
   color: var(--ink);
-  background: var(--bg);
+  background:
+    radial-gradient(70rem 48rem at 12% -8%,
+      color-mix(in srgb, var(--accent) var(--wash-accent-mix), transparent), transparent 62%),
+    radial-gradient(55rem 40rem at 105% 102%,
+      color-mix(in srgb, var(--ink) 4%, transparent), transparent 60%),
+    var(--bg);
   -webkit-font-smoothing: antialiased;
 }
 
@@ -431,6 +440,49 @@ main {
   object-fit: cover;
   border: 1px solid var(--line-soft);
   margin-bottom: 2rem;
+}
+
+.provenance {
+  margin-top: 3rem;
+  font-size: 0.95rem;
+  color: var(--ink-muted);
+}
+
+/* ===== Graz gallery (About) ===== */
+
+.graz {
+  margin-top: 3.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.graz__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.graz__photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--line-soft);
+  filter: saturate(0.85);
+}
+
+.graz__photo--tall {
+  grid-row: span 2;
+}
+
+@media (max-width: 640px) {
+  .graz__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .graz__photo--tall {
+    grid-row: auto;
+  }
 }
 
 /* ===== Footer ===== */
