@@ -483,12 +483,6 @@ main {
   gap: 1.25rem;
 }
 
-.footer-identity {
-  margin: 0;
-  font-size: 0.8rem;
-  color: var(--ink-muted);
-}
-
 .footer-link {
   display: inline-flex;
   align-items: center;
