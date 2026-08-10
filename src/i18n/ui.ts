@@ -71,11 +71,6 @@ export const ui = {
         jsonDescription: 'A daily habit tracker with focus sessions and iCloud sync.',
         storeAria: 'Download Giorni on the App Store',
       },
-      alsoMade: {
-        prefix: 'Also from the studio:',
-        appelou: 'a price-comparison app for Alagoas, Brazil',
-        nitpickr: 'an AI code-review tool for GitHub',
-      },
       provenance: 'Made in Europe. Built under European privacy law, with no trackers and no data resale.',
     },
     about: {
@@ -94,9 +89,9 @@ export const ui = {
         'And I’m not from here. I came from Brazil, chose this place, and I care about it the way you care about things you chose. Rogue Pixel is a small way of giving something back to the city and the continent that became home.',
       closing: 'If one of these apps ends up on your phone, now you know who made it and where.',
       grazAlts: {
-        uhrturm: 'The Uhrturm clock tower on the Schlossberg in Graz',
-        murinsel: 'The Murinsel floating platform on the Mur river in Graz',
-        hauptplatz: 'Facades on the Hauptplatz, the main square of Graz',
+        uhrturm: 'The Uhrturm clock tower on the Schlossberg, seen from the square below',
+        murinsel: 'The Murinsel floating platform on the Mur river at dusk',
+        hauptplatz: 'The Hauptplatz in Graz on a wet evening, with the lit kiosk in the middle of the square',
       },
       contactPrefix: 'Questions about the apps, or just want to say hi? Write me at',
       portraitAlt: 'Portrait of Rubens Pessoa',
@@ -144,11 +139,6 @@ export const ui = {
         jsonDescription: 'Um rastreador de hábitos diários com sessões de foco e sincronização via iCloud.',
         storeAria: 'Baixar o Giorni na App Store',
       },
-      alsoMade: {
-        prefix: 'Também do estúdio:',
-        appelou: 'um comparador de preços para Alagoas',
-        nitpickr: 'uma ferramenta de revisão de código com IA para o GitHub',
-      },
       provenance: 'Feito na Europa. Criado sob as leis europeias de privacidade, sem rastreadores e sem venda de dados.',
     },
     about: {
@@ -167,9 +157,9 @@ export const ui = {
         'E eu não sou daqui. Vim do Brasil, escolhi este lugar, e me importo com ele do jeito que a gente se importa com o que escolheu. A Rogue Pixel é um jeito pequeno de retribuir à cidade e ao continente que viraram casa.',
       closing: 'Se um desses apps acabar no seu celular, agora você sabe quem fez e onde.',
       grazAlts: {
-        uhrturm: 'A torre do relógio Uhrturm no Schlossberg, em Graz',
-        murinsel: 'A plataforma flutuante Murinsel no rio Mur, em Graz',
-        hauptplatz: 'Fachadas na Hauptplatz, a praça principal de Graz',
+        uhrturm: 'A torre do relógio Uhrturm no Schlossberg, vista da praça abaixo',
+        murinsel: 'A plataforma flutuante Murinsel no rio Mur ao anoitecer',
+        hauptplatz: 'A Hauptplatz de Graz numa noite chuvosa, com o quiosque iluminado no meio da praça',
       },
       contactPrefix: 'Dúvidas sobre os apps, ou só quer dizer um oi? Me escreva em',
       portraitAlt: 'Retrato de Rubens Pessoa',
@@ -217,11 +207,6 @@ export const ui = {
         jsonDescription: 'Ein täglicher Habit-Tracker mit Fokus-Sessions und iCloud-Sync.',
         storeAria: 'Giorni im App Store laden',
       },
-      alsoMade: {
-        prefix: 'Außerdem aus dem Studio:',
-        appelou: 'eine Preisvergleichs-App für Alagoas, Brasilien',
-        nitpickr: 'ein KI-Code-Review-Tool für GitHub',
-      },
       provenance: 'Made in Europe. Gebaut unter europäischem Datenschutzrecht, ohne Tracker und ohne Datenverkauf.',
     },
     about: {
@@ -240,9 +225,9 @@ export const ui = {
         'Und ich bin nicht von hier. Ich kam aus Brasilien, habe mir diesen Ort ausgesucht, und er liegt mir so am Herzen, wie einem Dinge am Herzen liegen, die man selbst gewählt hat. Rogue Pixel ist mein kleiner Beitrag an die Stadt und den Kontinent, die mein Zuhause geworden sind.',
       closing: 'Wenn eine dieser Apps auf deinem Handy landet, weißt du jetzt, wer sie gemacht hat und wo.',
       grazAlts: {
-        uhrturm: 'Der Uhrturm am Schlossberg in Graz',
-        murinsel: 'Die Murinsel in der Mur in Graz',
-        hauptplatz: 'Fassaden am Grazer Hauptplatz',
+        uhrturm: 'Der Uhrturm am Schlossberg, vom Platz darunter gesehen',
+        murinsel: 'Die Murinsel in der Mur in der Abenddämmerung',
+        hauptplatz: 'Der Grazer Hauptplatz an einem regnerischen Abend, mit dem beleuchteten Würstelstand',
       },
       contactPrefix: 'Fragen zu den Apps, oder einfach Hallo sagen? Schreib mir an',
       portraitAlt: 'Porträt von Rubens Pessoa',

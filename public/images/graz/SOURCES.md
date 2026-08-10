@@ -1,10 +1,13 @@
 # Graz photo sources
 
-All photos are CC0 (public domain dedication) from Wikimedia Commons — no attribution
-required, verified 2026-08-10. Self-hosted as resized WebP; originals linked below.
+All photos on this page are my own, shot in Graz. Copyright Rubens Pessoa de Barros Filho,
+all rights reserved. They replaced the CC0 Wikimedia Commons placeholders on 2026-08-10.
 
-| File | Source | Author | License |
-|---|---|---|---|
-| uhrturm-*.webp | https://commons.wikimedia.org/wiki/File:Clock_tower_in_Graz.jpg | DJ3tausend | CC0 |
-| murinsel-*.webp | https://commons.wikimedia.org/wiki/File:Murinsel_Graz_2022-08-03_04.jpg | Leonhard Lenz | CC0 |
-| hauptplatz-*.webp | https://commons.wikimedia.org/wiki/File:Hauptplatz_Graz_2022-08-03_01.jpg | Leonhard Lenz | CC0 |
+Self-hosted as WebP at 800w and 1600w, cropped from the camera originals and stripped of
+EXIF metadata (no location or device data ships with the site).
+
+| File | Subject | Aspect |
+|---|---|---|
+| uhrturm-*.webp | The Uhrturm on the Schlossberg, from Schlossbergplatz | 2:3 |
+| murinsel-*.webp | The Murinsel on the Mur at dusk | ~3:2 |
+| hauptplatz-*.webp | The Hauptplatz on a wet evening | ~3:2 |
