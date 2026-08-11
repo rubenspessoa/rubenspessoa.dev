@@ -30,7 +30,7 @@
     0 1px 2px light-dark(rgba(1, 22, 39, 0.04), rgba(0, 0, 0, 0.24)),
     0 12px 32px light-dark(rgba(1, 22, 39, 0.05), rgba(0, 0, 0, 0));
   --icon-ring: light-dark(rgba(0, 0, 0, 0.06), rgba(255, 255, 255, 0.08));
-  --mark-halo: rgba(236, 236, 234, 0.55);
+  --mark-filter: none;
   --icon-shadow: light-dark(rgba(1, 22, 39, 0.1), rgba(0, 0, 0, 0.3));
   --grain-opacity: 0.22;
   --wash-accent-mix: 7%;
@@ -70,18 +70,27 @@
   color-scheme: dark;
 }
 
-/* Grain opacity and wash strength are numbers, not colors, so they need
-   explicit dark rules (the accent glow needs more presence on near-black) */
+/* Grain opacity, wash strength, and the logo halo are not colors, so they
+   need explicit dark rules (the accent glow needs more presence on
+   near-black, and the raster logo needs an outline to survive it) */
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     --grain-opacity: 0.16;
     --wash-accent-mix: 13%;
+    --mark-halo: rgba(236, 236, 234, 0.55);
+    --mark-filter:
+      drop-shadow(1px 0 0 var(--mark-halo)) drop-shadow(-1px 0 0 var(--mark-halo))
+      drop-shadow(0 1px 0 var(--mark-halo)) drop-shadow(0 -1px 0 var(--mark-halo));
   }
 }
 
 :root[data-theme="dark"] {
   --grain-opacity: 0.16;
   --wash-accent-mix: 13%;
+  --mark-halo: rgba(236, 236, 234, 0.55);
+  --mark-filter:
+    drop-shadow(1px 0 0 var(--mark-halo)) drop-shadow(-1px 0 0 var(--mark-halo))
+    drop-shadow(0 1px 0 var(--mark-halo)) drop-shadow(0 -1px 0 var(--mark-halo));
 }
 
 /* ===== Reset ===== */
@@ -206,7 +215,7 @@ main {
 }
 
 /*
-  Wordmark only up here. "The" and "company" recede so the name still
+  Wordmark only up here. "The" and "app studio" recede so the name still
   carries the lockup at a glance; all of it takes currentColor, so the
   header stays in step with the theme.
 */
@@ -231,31 +240,19 @@ main {
   color: var(--ink-muted);
 }
 
+/*
+  The dog is a raster and mostly black ink, so it cannot take currentColor
+  and it all but vanishes on the near-black background. Dark mode swaps in
+  a one-pixel halo (see --mark-filter) to hold its silhouette.
+*/
 .pixeldog-mark {
   display: block;
   width: auto;
+  filter: var(--mark-filter);
 }
 
 .footer-brand__logo {
   height: 4.5rem;
-}
-
-/*
-  The dog is mostly black ink, which all but vanishes on the near-black
-  background, so dark mode gets a one-pixel halo to hold its silhouette.
-*/
-:root[data-theme="dark"] .pixeldog-mark {
-  filter:
-    drop-shadow(1px 0 0 var(--mark-halo)) drop-shadow(-1px 0 0 var(--mark-halo))
-    drop-shadow(0 1px 0 var(--mark-halo)) drop-shadow(0 -1px 0 var(--mark-halo));
-}
-
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) .pixeldog-mark {
-    filter:
-      drop-shadow(1px 0 0 var(--mark-halo)) drop-shadow(-1px 0 0 var(--mark-halo))
-      drop-shadow(0 1px 0 var(--mark-halo)) drop-shadow(0 -1px 0 var(--mark-halo));
-  }
 }
 
 .site-nav {
