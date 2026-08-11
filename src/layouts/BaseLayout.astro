@@ -28,7 +28,7 @@ const {
   ogDescription,
   ogType = 'website',
   ogImage = 'https://rubenspessoa.dev/images/seo/social-card.png',
-  ogImageAlt = 'Rogue Pixel, the one-person app studio of Rubens Pessoa in Graz, Austria. Apps for iPhone, iPad, and Mac.',
+  ogImageAlt = 'Pixeldog, the one-person app studio of Rubens Pessoa in Graz, Austria. Apps for iPhone, iPad, and Mac.',
   robots = 'index,follow,max-image-preview:large',
   jsonLd,
   locale = 'en',
@@ -50,7 +50,7 @@ const resolvedOgDescription = ogDescription ?? description;
     <meta name="theme-color" content="#fbfaf7" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="#0f0f0e" media="(prefers-color-scheme: dark)">
     <meta property="og:locale" content={localeOgTags[locale]}>
-    <meta property="og:site_name" content="Rogue Pixel">
+    <meta property="og:site_name" content="Pixeldog">
     <meta property="og:title" content={resolvedOgTitle}>
     <meta property="og:description" content={resolvedOgDescription}>
     <meta property="og:type" content={ogType}>
@@ -69,12 +69,10 @@ const resolvedOgDescription = ogDescription ?? description;
       <link rel="alternate" hreflang={alt.hreflang} href={alt.href} />
     ))}
     <link rel="icon" href="/favicon.ico" sizes="any">
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#011627">
     <link rel="manifest" href="/site.webmanifest">
     <script is:inline>
       try {

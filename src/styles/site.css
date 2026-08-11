@@ -30,6 +30,7 @@
     0 1px 2px light-dark(rgba(1, 22, 39, 0.04), rgba(0, 0, 0, 0.24)),
     0 12px 32px light-dark(rgba(1, 22, 39, 0.05), rgba(0, 0, 0, 0));
   --icon-ring: light-dark(rgba(0, 0, 0, 0.06), rgba(255, 255, 255, 0.08));
+  --mark-halo: rgba(236, 236, 234, 0.55);
   --icon-shadow: light-dark(rgba(1, 22, 39, 0.1), rgba(0, 0, 0, 0.3));
   --grain-opacity: 0.22;
   --wash-accent-mix: 7%;
@@ -201,12 +202,56 @@ main {
 .brand {
   display: inline-flex;
   text-decoration: none;
+  color: var(--ink);
 }
 
-.brand__logo {
+/*
+  Logo lockup: the mark is a raster (pixel-art dog), so it cannot take
+  currentColor the way the old wordmark did. The wordmark beside it does,
+  which keeps the pairing in step with the theme.
+*/
+.brand-lockup {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.brand-lockup__mark {
+  height: 2.6rem;
+}
+
+.brand-lockup__word {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 650;
+  letter-spacing: -0.03em;
+}
+
+.pixeldog-mark {
   display: block;
-  height: 2.4rem;
   width: auto;
+}
+
+.footer-brand__logo {
+  height: 2.5rem;
+}
+
+/*
+  The dog is mostly black ink, which all but vanishes on the near-black
+  background, so dark mode gets a one-pixel halo to hold its silhouette.
+*/
+:root[data-theme="dark"] .pixeldog-mark {
+  filter:
+    drop-shadow(1px 0 0 var(--mark-halo)) drop-shadow(-1px 0 0 var(--mark-halo))
+    drop-shadow(0 1px 0 var(--mark-halo)) drop-shadow(0 -1px 0 var(--mark-halo));
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .pixeldog-mark {
+    filter:
+      drop-shadow(1px 0 0 var(--mark-halo)) drop-shadow(-1px 0 0 var(--mark-halo))
+      drop-shadow(0 1px 0 var(--mark-halo)) drop-shadow(0 -1px 0 var(--mark-halo));
+  }
 }
 
 .site-nav {
@@ -552,12 +597,6 @@ main {
 /* Scoped to beat `.site-footer a`, which sets color: inherit below */
 .site-footer .footer-brand {
   color: var(--ink);
-}
-
-.footer-brand__logo {
-  display: block;
-  height: 2.5rem;
-  width: auto;
 }
 
 .site-footer a {

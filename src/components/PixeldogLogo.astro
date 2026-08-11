@@ -1,0 +1,14 @@
+---
+import PixeldogMark from './PixeldogMark.astro';
+
+interface Props {
+  class?: string;
+}
+
+const { class: className } = Astro.props;
+---
+
+<span class:list={['brand-lockup', className]}>
+  <PixeldogMark class="brand-lockup__mark" />
+  <span class="brand-lockup__word">pixeldog</span>
+</span>
