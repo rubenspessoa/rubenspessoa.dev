@@ -1,6 +1,6 @@
 ---
 import { ui, localePrefixes, type Locale } from '../i18n/ui';
-import RoguePixelLogo from './RoguePixelLogo.astro';
+import PixeldogLogo from './PixeldogLogo.astro';
 
 interface Props {
   locale?: Locale;
@@ -15,8 +15,8 @@ const aboutPath = `${prefix}/about/`;
 ---
 
 <header class="site-header">
-  <a class="brand" href={home} aria-label="Rogue Pixel">
-    <RoguePixelLogo class="brand__logo" />
+  <a class="brand" href={home}>
+    <PixeldogLogo />
   </a>
 
   <nav class="site-nav" aria-label="Primary">

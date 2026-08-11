@@ -1,0 +1,13 @@
+---
+interface Props {
+  class?: string;
+}
+
+const { class: className } = Astro.props;
+---
+
+<span class:list={['brand-lockup', className]}>
+  <span class="brand-lockup__article">The</span>
+  <span class="brand-lockup__word">pixeldog</span>
+  <span class="brand-lockup__article">app studio</span>
+</span>

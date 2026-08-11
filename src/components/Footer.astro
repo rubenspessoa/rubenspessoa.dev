@@ -1,6 +1,6 @@
 ---
 import { ui, localeNames, localePrefixes, pathForLocale, type Locale } from '../i18n/ui';
-import RoguePixelMark from './RoguePixelMark.astro';
+import PixeldogMark from './PixeldogMark.astro';
 
 interface Props {
   locale?: Locale;
@@ -16,8 +16,8 @@ const home = prefix ? `${prefix}/` : '/';
 
 <footer class="site-footer">
   <div class="footer-row">
-    <a class="footer-brand" href={home} aria-label="Rogue Pixel">
-      <RoguePixelMark class="footer-brand__logo" />
+    <a class="footer-brand" href={home} aria-label="Pixeldog">
+      <PixeldogMark class="footer-brand__logo" />
     </a>
 
     <div class="footer-links" aria-label="Footer links">

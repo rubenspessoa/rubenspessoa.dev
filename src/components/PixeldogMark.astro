@@ -1,0 +1,17 @@
+---
+interface Props {
+  class?: string;
+}
+
+const { class: className } = Astro.props;
+---
+
+<img
+  class:list={['pixeldog-mark', className]}
+  src="/images/brand/pixeldog-mark.png"
+  alt=""
+  width="203"
+  height="256"
+  loading="lazy"
+  decoding="async"
+/>
