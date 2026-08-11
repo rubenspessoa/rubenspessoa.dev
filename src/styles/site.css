@@ -216,6 +216,7 @@ main {
   gap: 0.32rem;
   font-family: var(--font-display);
   letter-spacing: -0.02em;
+  white-space: nowrap;
 }
 
 .brand-lockup__word {
@@ -754,6 +755,22 @@ main {
   .footer-row {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  /* "The pixeldog app studio" and the nav together outgrow a phone
+     header, so the framing words step down, then out. */
+  .brand-lockup__word {
+    font-size: 1.2rem;
+  }
+
+  .brand-lockup__article {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 350px) {
+  .brand-lockup__article {
+    display: none;
   }
 }
 
