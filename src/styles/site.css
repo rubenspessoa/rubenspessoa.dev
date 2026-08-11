@@ -206,25 +206,28 @@ main {
 }
 
 /*
-  Logo lockup: the mark is a raster (pixel-art dog), so it cannot take
-  currentColor the way the old wordmark did. The wordmark beside it does,
-  which keeps the pairing in step with the theme.
+  Wordmark only up here. "The" and "company" recede so the name still
+  carries the lockup at a glance; all of it takes currentColor, so the
+  header stays in step with the theme.
 */
 .brand-lockup {
   display: inline-flex;
-  align-items: center;
-  gap: 0.55rem;
-}
-
-.brand-lockup__mark {
-  height: 2.6rem;
+  align-items: baseline;
+  gap: 0.32rem;
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
 }
 
 .brand-lockup__word {
-  font-family: var(--font-display);
   font-size: 1.4rem;
   font-weight: 650;
   letter-spacing: -0.03em;
+}
+
+.brand-lockup__article {
+  font-size: 1.05rem;
+  font-weight: 400;
+  color: var(--ink-muted);
 }
 
 .pixeldog-mark {
@@ -233,7 +236,7 @@ main {
 }
 
 .footer-brand__logo {
-  height: 2.5rem;
+  height: 4.5rem;
 }
 
 /*

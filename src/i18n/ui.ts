@@ -45,9 +45,9 @@ export const ui = {
       description:
         'Pixeldog is the app studio of Rubens Pessoa. Native apps for iPhone, iPad, and Mac: Save My Cactus, Hustlrr, and Giorni.',
       ogDescription: 'Native apps for Apple devices from Pixeldog, the one-person studio of Rubens Pessoa.',
-      heroTitle: 'Apps for humans.',
+      heroTitle: 'Native apps for humans.',
       heroLede:
-        'Pixeldog is the one-person app studio of Rubens Pessoa in Graz, Austria. Native apps for iPhone, iPad, Mac, and Apple Watch, and the person who built them also answers the support email.',
+        'Pixeldog is the one-person app studio of Rubens Pessoa in Graz, Austria. Apps for iPhone, iPad, Mac, and Apple Watch, and the person who built them also answers the support email.',
       appsLabel: 'Apps by Pixeldog',
       comingSoon: 'Coming soon',
       learnMore: 'Learn more',
@@ -114,9 +114,9 @@ export const ui = {
       description:
         'A Pixeldog é o estúdio de apps de Rubens Pessoa. Apps nativos para iPhone, iPad e Mac: Save My Cactus, Hustlrr e Giorni.',
       ogDescription: 'Apps nativos para dispositivos Apple da Pixeldog, o estúdio de uma pessoa só de Rubens Pessoa.',
-      heroTitle: 'Apps para gente de verdade.',
+      heroTitle: 'Apps nativos para gente de verdade.',
       heroLede:
-        'A Pixeldog é o estúdio de apps de uma pessoa só: o de Rubens Pessoa, em Graz, na Áustria. Apps nativos para iPhone, iPad, Mac e Apple Watch, e quem escreveu o código é quem responde o e-mail de suporte.',
+        'A Pixeldog é o estúdio de apps de uma pessoa só: o de Rubens Pessoa, em Graz, na Áustria. Apps para iPhone, iPad, Mac e Apple Watch, e quem escreveu o código é quem responde o e-mail de suporte.',
       appsLabel: 'Apps da Pixeldog',
       comingSoon: 'Em breve',
       learnMore: 'Saiba mais',
@@ -183,9 +183,9 @@ export const ui = {
       description:
         'Pixeldog ist das App-Studio von Rubens Pessoa. Native Apps für iPhone, iPad und Mac: Save My Cactus, Hustlrr und Giorni.',
       ogDescription: 'Native Apps für Apple-Geräte von Pixeldog, dem Ein-Personen-Studio von Rubens Pessoa.',
-      heroTitle: 'Apps für Menschen.',
+      heroTitle: 'Native Apps für Menschen.',
       heroLede:
-        'Pixeldog ist das Ein-Personen-App-Studio von Rubens Pessoa in Graz. Native Apps für iPhone, iPad, Mac und Apple Watch, und wer sie gebaut hat, beantwortet auch die Support-Mails.',
+        'Pixeldog ist das Ein-Personen-App-Studio von Rubens Pessoa in Graz. Apps für iPhone, iPad, Mac und Apple Watch, und wer sie gebaut hat, beantwortet auch die Support-Mails.',
       appsLabel: 'Apps von Pixeldog',
       comingSoon: 'Demnächst',
       learnMore: 'Mehr erfahren',
